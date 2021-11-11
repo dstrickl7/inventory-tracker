@@ -1,0 +1,19 @@
+body {
+  background-color: blue;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: "Caveat", cursive;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=style.css.map */
