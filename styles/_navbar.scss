@@ -1,0 +1,84 @@
+@use "./utilities";
+
+.navbar {
+  background: linear-gradient(utilities.$lgreen, utilities.$green);
+  width: 100%;
+  @include utilities.flex(space-between, center);
+}
+
+// Logo and log container
+.logo-container {
+  @include utilities.flex(center, flex-start);
+  width: 60%;
+  padding: 0.5rem;
+  a {
+    text-align: center;
+  }
+}
+.logo-text {
+  text-decoration: none;
+  color: utilities.$white;
+  font-size: 1.5rem;
+  font-family: utilities.$caveat;
+  @include utilities.flex(center, flex-start);
+}
+
+// Hamburger and close icon
+.nav-icon-container {
+  @include utilities.flex(center, flex-end);
+  width: 40%;
+  padding: 0.5rem;
+}
+.nav-icon {
+  border: none;
+  background-color: transparent;
+}
+
+.nav-icon-img {
+  width: 1.5rem;
+  fill {
+    color: utilities.$white;
+    background-color: utilities.$white;
+  }
+}
+
+.hamburger {
+  display: flex;
+  margin-right: 0.5rem;
+}
+
+.hamburger.active {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+.close.active {
+  display: flex;
+  z-index: 11;
+  width: 0.75rem;
+  margin: 0.5rem;
+}
+// Navlist container and navlist
+.navlist-container {
+  display: none;
+}
+.navlist-container.active {
+  @include utilities.flex(center, center);
+  position: fixed;
+  right: 0;
+  background-color: utilities.$white;
+  height: 100vh;
+  padding: 0 1rem;
+  z-index: 10;
+}
+.navlink {
+  text-decoration: none;
+  color: utilities.$black;
+}
+.navitem {
+  list-style: none;
+  padding: 0.5rem 0;
+}
