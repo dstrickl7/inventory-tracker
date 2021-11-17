@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.566" height="32.677" viewBox="0 0 37.566 32.677">
+  <g id="Group_1" data-name="Group 1" transform="translate(-8.085 -8.662)">
+    <g id="List" transform="translate(987.434 -439.696) rotate(-19)">
+      <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(-1074 111)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="19.212" height="27.944" stroke="none"/>
+        <rect x="0.5" y="0.5" width="18.212" height="26.944" fill="none"/>
+      </g>
+      <line id="Line_3" data-name="Line 3" x2="12.808" transform="translate(-1070.798 117.986)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_5" data-name="Line 5" x2="12.808" transform="translate(-1070.798 124.972)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_6" data-name="Line 6" x2="12.808" transform="translate(-1070.798 128.465)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_7" data-name="Line 7" x2="9.897" transform="translate(-1070.798 131.958)" fill="none" stroke="#707070" stroke-width="1"/>
+      <line id="Line_4" data-name="Line 4" x2="8.15" transform="translate(-1070.798 121.479)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+    <g id="Pencil" transform="translate(1043.435 -141.141)">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="4.945" height="4.6" rx="2" transform="translate(-1004.486 158.891) rotate(-50)" fill="#efcece"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="17.802" height="4.6" transform="translate(-1014.409 170.689) rotate(-50)" fill="#ebe59c"/>
+      <line id="Line_1" data-name="Line 1" y1="12.857" x2="10.783" transform="translate(-1013.559 158.586)" fill="none" stroke="#cfc976" stroke-width="1"/>
+      <path id="Polygon_1" data-name="Polygon 1" d="M2.233,0,4.467,4.188H0Z" transform="translate(-1016.435 171.297) rotate(-22)" fill="#eee4bd"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="5.06" height="1.117" transform="matrix(0.766, 0.643, -0.643, 0.766, -1003.078, 156.845)" fill="#807878"/>
+      <line id="Line_2" data-name="Line 2" y1="12.857" x2="10.783" transform="translate(-1011.485 160.245)" fill="none" stroke="#cfc976" stroke-width="1"/>
+      <path id="Polygon_2" data-name="Polygon 2" d="M1.117,0,2.233,2.094H0Z" transform="translate(-1015.65 173.238) rotate(-22)"/>
+    </g>
+  </g>
+</svg>
