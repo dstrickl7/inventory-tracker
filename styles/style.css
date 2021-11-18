@@ -101,29 +101,51 @@
 
 .container {
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 1rem;
   padding: 1rem;
 }
 
 .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 80%;
   height: 80vh;
 }
 
 .add-container {
+  position: relative;
   width: 80%;
 }
 
 .form-container {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  margin-top: 0.5rem;
+}
+
+.input-container {
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: space-between;
+  align-items: center;
+}
+
+.inputs {
+  width: 30%;
+  margin: 0 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputs input,
+.inputs select {
+  max-width: 100%;
 }
 
 .btn-container {
@@ -161,6 +183,7 @@
   padding: 0.5rem;
   font-weight: 600;
   min-width: 40%;
+  margin: 1rem 0.5rem;
 }
 
 .btn-nofill {
@@ -201,8 +224,18 @@ body {
   font-weight: 700;
 }
 
+.add-container-close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 5;
+}
 .add-container-close path {
   fill: #57ad45;
+}
+
+label {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

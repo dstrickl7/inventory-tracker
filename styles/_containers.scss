@@ -2,24 +2,40 @@
 
 .container {
   background-color: utilities.$white;
-  @include utilities.flex(center, space-between, column);
   border-radius: 1rem;
   padding: 1rem;
 }
 
 .main-container {
+  @include utilities.flex(center, space-between, column);
   width: 80%;
   height: 80vh;
 }
 
 .add-container {
   //   display: none;
+  position: relative;
   width: 80%;
 }
 
 .form-container {
   width: 100%;
-  @include utilities.flex(space-between, center);
+  @include utilities.flex(normal, center, column);
+  margin-top: 0.5rem;
+}
+
+.input-container {
+  @include utilities.flex(center, center);
+}
+
+.inputs {
+  width: 30%;
+  margin: 0 0.25rem;
+  @include utilities.flex(center, center, column);
+  input,
+  select {
+    max-width: 100%;
+  }
 }
 
 .btn-container {
