@@ -45,7 +45,7 @@
             <div class="container main-container">
                 <h1 class="title main-title">Inventory</h1>
             <!-- Display inventory items -->
-                <?php include "scripts/read.php" ;?>
+                <?php include "scripts/read-inventory.php" ;?>
                 <!-- Button to add items -->
                 <div class="btn-container">
                     <button class="add-btn btn-fill btn" id="add-inventory">Add Items</button>
@@ -98,7 +98,7 @@
             <div class="container main-container">
                 <h1 class="title main-title">List</h1>
             <!-- Display list items -->
-                <?php include "scripts/read.php" ;?>
+                <?php include "scripts/read-list.php" ;?>
                 <!-- Button to add items -->
                 <div class="btn-container">
                     <button class="add-btn btn-fill btn" id="add-list">Add Items</button>
