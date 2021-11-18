@@ -12,6 +12,12 @@
   height: 80vh;
 }
 
+.scroll-container {
+  overflow-y: scroll;
+  width: 100%;
+  @include utilities.flex(center, space-between, column);
+}
+
 .add-container {
   display: none;
   position: absolute;
@@ -30,7 +36,8 @@
   margin-top: 0.5rem;
 }
 
-.input-container {
+.input-container-inv,
+.input-container-li {
   @include utilities.flex(center, center);
   margin-top: 1rem;
 }

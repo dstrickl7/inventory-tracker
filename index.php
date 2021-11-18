@@ -45,7 +45,10 @@
             <div class="container main-container">
                 <h1 class="title main-title">Inventory</h1>
             <!-- Display inventory items -->
-                <?php include "scripts/read-inventory.php" ;?>
+                <div class="scroll-container">
+                    <?php include "scripts/read-inventory.php" ;?>
+                </div>
+                
                 <!-- Button to add items -->
                 <div class="btn-container">
                     <button class="add-btn btn-fill btn" id="add-inventory">Add Items</button>
@@ -59,32 +62,36 @@
                 </svg>
                 <!-- Form -->
                     <form action="scripts/create-inventory.php" method="post" class="form-container">
-                        <div class="input-container">
-                            <div class="inputs">
-                                <label for="item">Item</label>
-                                <input type="text" name="item" id="item" required>
+                        <!-- Input container -->
+                        <div class="inv-item-input-cont">
+                            <div class="input-container-inv">
+                                <div class="inputs">
+                                    <label for="item">Item</label>
+                                    <input type="text" name="item" id="item" required>
+                                </div>
+                                <div class="inputs">
+                                    <label for="category">Category</label> 
+                                    <select name="category" id="category-select">
+                                        <option value="uncategorized">Uncategorized</option>
+                                        <option value="produce">Produce</option>
+                                        <option value="meat">Meat & Poultry</option>
+                                        <option value="dairy">Dairy & Eggs</option>
+                                        <option value="grains">Grains, Rice, & Beans</option>
+                                        <option value="spices">Spices & Seasonings</option>
+                                    </select>
+                                </div>
+                                <div class="inputs">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" name="amount" id="amount" step=".25" min="0" max="1000">
+                                </div>
+                                <button class="delete-btn">
+                                    <img src="styles/icons/trashcan.svg" alt="Delete">
+                                </button>
                             </div>
-                            <div class="inputs">
-                                <label for="category">Category</label> 
-                                <select name="category" id="category-select">
-                                    <option value="uncategorized">Uncategorized</option>
-                                    <option value="produce">Produce</option>
-                                    <option value="meat">Meat & Poultry</option>
-                                    <option value="dairy">Dairy & Eggs</option>
-                                    <option value="grains">Grains, Rice, & Beans</option>
-                                    <option value="spices">Spices & Seasonings</option>
-                                </select>
-                            </div>
-                            <div class="inputs">
-                                <label for="amount">Amount</label>
-                                <input type="number" name="amount" id="amount" step=".25" min="0" max="1000">
-                            </div>
-                            <button class="delete-btn">
-                                <img src="styles/icons/trashcan.svg" alt="Delete">
-                            </button>
                         </div>
+
                         <div class="btn-container">
-                            <button class="btn-nofill btn">More items</button>
+                            <button class="btn-nofill btn" id="add-item-inventory">More items</button>
                             <button type="submit" class="btn-fill btn">Save</button>
                         </div>   
                     </form>
@@ -98,7 +105,10 @@
             <div class="container main-container">
                 <h1 class="title main-title">List</h1>
             <!-- Display list items -->
-                <?php include "scripts/read-list.php" ;?>
+                <div class="scroll-container">
+                    <?php include "scripts/read-list.php" ;?>
+                </div>
+               
                 <!-- Button to add items -->
                 <div class="btn-container">
                     <button class="add-btn btn-fill btn" id="add-list">Add Items</button>
@@ -115,20 +125,24 @@
                     </svg>
                 <!-- Form -->
                     <form action="scripts/create-list.php" method="post" class="form-container">
-                        <div class="input-container">
-                            <label for="list-item">Item</label>
-                            <input type="text" name="list-item" id="list-item" required>
+                        <!-- Input container -->
+                        <div class="input-container-li">
+                            <div class="inputs">
+                                <label for="list-item">Item</label>
+                                <input type="text" name="list-item" id="list-item" required>
+                            </div>
+                            <div class="inputs">
+                                <label for="list-amount">Amount</label>
+                                <input type="number" name="list-amount" id="list-amount" step="1" min="0" max="100">
+                            </div>
+                            <div class="inputs">
+                                <label for="cost">Est. Cost</label>
+                                <input type="number" name="list-cost" id="list-cost" step="1" min="0" max="1000">
+                            </div>
                         </div>
-                        <div class="input-container">
-                            <label for="list-amount">Amount</label>
-                            <input type="number" name="list-amount" id="list-amount" step="1" min="0" max="100">
-                        </div>
-                        <div class="input-container">
-                            <label for="cost">Est. Cost</label>
-                            <input type="number" name="list-cost" id="list-cost" step="1" min="0" max="1000">
-                        </div>
+                        
                         <div class="btn-container">
-                            <button class="btn-nofill btn">More items</button>
+                            <button class="btn-nofill btn" id="add-item-list">More items</button>
                             <button type="submit" class="btn-fill btn">Save</button>
                         </div>
                     </form>
