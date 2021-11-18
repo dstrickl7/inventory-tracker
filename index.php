@@ -58,7 +58,7 @@
                     <path fill="#000000" id="icon-close" d="M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z" transform="translate(-0.222 -0.222)" fill-rule="evenodd"/>
                 </svg>
                 <!-- Form -->
-                    <form action="scripts/create.php" method="post" class="form-container">
+                    <form action="scripts/create-inventory.php" method="post" class="form-container">
                         <div class="input-container">
                             <div class="inputs">
                                 <label for="item">Item</label>
@@ -79,6 +79,9 @@
                                 <label for="amount">Amount</label>
                                 <input type="number" name="amount" id="amount" step=".25" min="0" max="1000">
                             </div>
+                            <button class="delete-btn">
+                                <img src="styles/icons/trashcan.svg" alt="Delete">
+                            </button>
                         </div>
                         <div class="btn-container">
                             <button class="btn-nofill btn">More items</button>
@@ -111,7 +114,7 @@
                         <path fill="#000000" id="icon-close" d="M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z" transform="translate(-0.222 -0.222)" fill-rule="evenodd"/>
                     </svg>
                 <!-- Form -->
-                    <form action="scripts/create.php" method="post" class="form-container">
+                    <form action="scripts/create-list.php" method="post" class="form-container">
                         <div class="input-container">
                             <label for="list-item">Item</label>
                             <input type="text" name="list-item" id="list-item" required>
@@ -122,7 +125,7 @@
                         </div>
                         <div class="input-container">
                             <label for="cost">Est. Cost</label>
-                            <input type="number" name="list-amount" id="list-amount" step="1" min="0" max="1000">
+                            <input type="number" name="list-cost" id="list-cost" step="1" min="0" max="1000">
                         </div>
                         <div class="btn-container">
                             <button class="btn-nofill btn">More items</button>
@@ -135,7 +138,7 @@
     
     
     </main>
-    
+    <script src="scripts/scripts.js"></script>
    
 </body>
 </html>

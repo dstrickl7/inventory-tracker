@@ -115,8 +115,15 @@
 }
 
 .add-container {
-  position: relative;
+  display: none;
+  position: absolute;
   width: 80%;
+  top: 15%;
+}
+
+.add-container.active {
+  display: flex;
+  z-index: 10;
 }
 
 .form-container {
@@ -133,6 +140,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .inputs {
@@ -186,6 +194,16 @@
   margin: 1rem 0.5rem;
 }
 
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  margin-left: 0.3rem;
+}
+.delete-btn img {
+  transform: scale(1.2);
+}
+
 .btn-nofill {
   background-color: transparent;
   border: solid #57ad45 0.2rem;
@@ -228,7 +246,7 @@ body {
   position: absolute;
   top: 5%;
   right: 5%;
-  z-index: 5;
+  z-index: 10;
 }
 .add-container-close path {
   fill: #57ad45;

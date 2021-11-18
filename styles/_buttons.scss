@@ -10,6 +10,16 @@
   margin: 1rem 0.5rem;
 }
 
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  margin-left: 0.3rem;
+  img {
+    transform: scale(1.2);
+  }
+}
+
 .btn-nofill {
   @include utilities.nofill(utilities.$green);
 }
