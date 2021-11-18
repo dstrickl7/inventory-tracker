@@ -1,5 +1,9 @@
 @use "./utilities";
 @use "navbar";
+@use "containers";
+@use "inventory";
+@use "list";
+@use "buttons";
 
 * {
   box-sizing: border-box;
@@ -13,11 +17,6 @@ body {
   background-color: utilities.$lgreen;
 }
 
-.container {
-  background-color: utilities.$white;
-  @include utilities.flex(center, center, column);
-}
-
 .overlay.active {
   background-color: utilities.$black;
   opacity: 70%;
@@ -28,8 +27,13 @@ body {
   z-index: 5;
 }
 
-.main-container {
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-.add-container {
+.add-container-close {
+  path {
+    fill: utilities.$green;
+  }
 }

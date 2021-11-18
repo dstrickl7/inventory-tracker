@@ -1,0 +1,18 @@
+@use "utilities";
+
+.btn {
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  min-width: 40%;
+}
+
+.btn-nofill {
+  @include utilities.nofill(utilities.$green);
+}
+
+.btn-fill {
+  @include utilities.fill(utilities.$green, utilities.$white);
+}

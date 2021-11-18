@@ -4,3 +4,14 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin fill($color, $text-color) {
+  background-color: $color;
+  color: $text-color;
+}
+
+@mixin nofill($color) {
+  background-color: transparent;
+  border: solid $color 0.2rem;
+  color: $color;
+}

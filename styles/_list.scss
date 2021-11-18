@@ -1,0 +1,10 @@
+@use "utilities";
+
+.list {
+  display: none;
+}
+
+.list.active {
+  @include utilities.flex(center, center, column);
+  padding-top: 1.5rem;
+}

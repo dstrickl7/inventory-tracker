@@ -1,0 +1,28 @@
+@use "./utilities";
+
+.container {
+  background-color: utilities.$white;
+  @include utilities.flex(center, space-between, column);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.main-container {
+  width: 80%;
+  height: 80vh;
+}
+
+.add-container {
+  //   display: none;
+  width: 80%;
+}
+
+.form-container {
+  width: 100%;
+  @include utilities.flex(space-between, center);
+}
+
+.btn-container {
+  width: 100%;
+  @include utilities.flex(space-between, center);
+}

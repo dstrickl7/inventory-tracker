@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="../styles/style.css">
@@ -40,15 +40,23 @@
         <div class="overlay"></div>
     </header>
     <main>
-        <section class="inventory">
+        <section class="inventory"> 
             <!-- Inventory Container -->
             <div class="container main-container">
+                <h1 class="title main-title">Inventory</h1>
             <!-- Display inventory items -->
-            <?php include "scripts/read.php" ;?>
-            <!-- Button to add items -->
-            <button class="add-btn btn-fill" id="add-inventory">Add Items</button>
+                <?php include "scripts/read.php" ;?>
+                <!-- Button to add items -->
+                <div class="btn-container">
+                    <button class="add-btn btn-fill btn" id="add-inventory">Add Items</button>
+                </div>
+                
+            </div>
             <!-- Add inventory container -->
-                <div class="container add-container inventory-add">
+            <div class="container add-container inventory-add">
+                <svg class="add-container-close" xmlns="http://www.w3.org/2000/svg" width="15.556" height="15.556" viewBox="0 0 15.556 15.556">
+  <path fill="#000000" id="icon-close" d="M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z" transform="translate(-0.222 -0.222)" fill-rule="evenodd"/>
+</svg>
                 <!-- Form -->
                 <div class="form-container">
                     <form action="scripts/create.php" method="post">
@@ -65,30 +73,37 @@
                         </select>
                         <label for="amount">Amount</label>
                         <input type="number" name="amount" id="amount" step=".25" min="0" max="1000">
-                        <button class="btn-nofill">More items</button>
-                        <button type="submit" class="btn-fill">Save</button>
+                        <div class="btn-container">
+                            <button class="btn-nofill btn">More items</button>
+                            <button type="submit" class="btn-fill btn">Save</button>
+                        </div>   
                     </form>
                 </div>
-                  
                     <!-- Form ends -->
                 </div>
-            </div>
-
             <!-- End Inventory Container -->
         </section>
         <section class="list">
+        
             <!-- List Container -->
             <div class="container main-container">
+                <h1 class="title main-title">List</h1>
             <!-- Display list items -->
-            <?php include "scripts/read.php" ;?>
-            <!-- Button to add items -->
-            <button class="add-btn btn-fill" id="add-list">Add Items</button>
+                <?php include "scripts/read.php" ;?>
+                <!-- Button to add items -->
+                <div class="btn-container">
+                    <button class="add-btn btn-fill btn" id="add-list">Add Items</button>
                 </div>
+                
+            </div>
             <!-- End List Container -->
             
             
             <!-- Add list items container -->
                 <div class="container add-container list-add">
+                    <svg class="add-container-close" xmlns="http://www.w3.org/2000/svg" width="15.556" height="15.556" viewBox="0 0 15.556 15.556">
+  <path fill="#000000" id="icon-close" d="M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z" transform="translate(-0.222 -0.222)" fill-rule="evenodd"/>
+</svg>
                 <!-- Form -->
                 <div class="form-container">
                     <form action="scripts/create.php" method="post">
@@ -98,8 +113,10 @@
                         <input type="number" name="list-amount" id="list-amount" step="1" min="0" max="100">
                         <label for="cost">Est. Cost</label>
                         <input type="number" name="list-amount" id="list-amount" step="1" min="0" max="1000">
-                        <button class="btn-nofill">More items</button>
-                        <button type="submit" class="btn-fill">Save</button>
+                        <div class="btn-container">
+                            <button class="btn-nofill btn">More items</button>
+                            <button type="submit" class="btn-fill btn">Save</button>
+                        </div>
                     </form>
                 </div>
                 <!-- Form ends -->
