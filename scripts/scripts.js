@@ -9,11 +9,9 @@ const addList = document.querySelector("#add-list");
 const addContainer = document.querySelector(".inventory-add");
 const overlay = document.querySelector(".overlay");
 const addContClose = document.querySelector(".add-container-close");
-const addInventoryItem = document.querySelector("#add-item-inventory");
+const addInventoryItem = document.querySelector("#add-item-inv");
 const addListItem = document.querySelector("#add-item-list");
-const inputContInv = document.querySelector(".input-container-inv");
-const inputContLi = document.querySelector(".input-container-li");
-const invInputCont = document.querySelector(".inv-item-input-cont");
+const invItemCont = document.querySelector(".inv-item-cont");
 
 // Open mobile nav
 hamburger.addEventListener("click", () => {
@@ -40,11 +38,27 @@ addContClose.addEventListener("click", () => {
 });
 
 // Add new row to add item
-addInventoryItem.addEventListener(
-  "click",
-  addSection(inputContInv, invInputCont)
-);
+let itemCount = 1;
 
-function addSection(section, parent) {
-  parent.appendChild(section.cloneNode(true));
+addInventoryItem.addEventListener("click", () => {
+  addSection(invItemCont);
+  itemCount++;
+});
+//
+
+// function addSection(section, parent) {
+//   parent.appendChild(section.cloneNode(true));
+// }
+
+function addSection(section) {
+  let clone = section.cloneNode(true);
+  section.after(clone);
+  clone.childNodes.forEach((node) => {
+    node.childNodes.forEach((childNode) => {
+      if (childNode.id) {
+        childNode.id = childNode.id + itemCount.toString();
+      }
+    });
+  });
 }
+// Create a count. For each clone, add 1 to count and create new clone id with value concatenated to it

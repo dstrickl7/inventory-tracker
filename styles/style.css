@@ -144,7 +144,7 @@
   margin-top: 0.5rem;
 }
 
-.input-container-inv,
+.inv-item-cont,
 .input-container-li {
   display: flex;
   flex-direction: row;

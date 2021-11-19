@@ -63,8 +63,8 @@
                 <!-- Form -->
                     <form action="scripts/create-inventory.php" method="post" class="form-container">
                         <!-- Input container -->
-                        <div class="inv-item-input-cont">
-                            <div class="input-container-inv">
+                        <div class="inv-items-cont">
+                            <div class="inv-item-cont">
                                 <div class="inputs">
                                     <label for="item">Item</label>
                                     <input type="text" name="item" id="item" required>
@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="btn-container">
-                            <button class="btn-nofill btn" id="add-item-inventory">More items</button>
+                            <button class="btn-nofill btn" id="add-item-inv">More items</button>
                             <button type="submit" class="btn-fill btn">Save</button>
                         </div>   
                     </form>
@@ -126,18 +126,20 @@
                 <!-- Form -->
                     <form action="scripts/create-list.php" method="post" class="form-container">
                         <!-- Input container -->
-                        <div class="input-container-li">
-                            <div class="inputs">
-                                <label for="list-item">Item</label>
-                                <input type="text" name="list-item" id="list-item" required>
-                            </div>
-                            <div class="inputs">
-                                <label for="list-amount">Amount</label>
-                                <input type="number" name="list-amount" id="list-amount" step="1" min="0" max="100">
-                            </div>
-                            <div class="inputs">
-                                <label for="cost">Est. Cost</label>
-                                <input type="number" name="list-cost" id="list-cost" step="1" min="0" max="1000">
+                        <div class="li-items-cont">
+                            <div class="li-item-cont">
+                                <div class="inputs">
+                                    <label for="list-item">Item</label>
+                                    <input type="text" name="list-item" id="list-item" required>
+                                </div>
+                                <div class="inputs">
+                                    <label for="list-amount">Amount</label>
+                                    <input type="number" name="list-amount" id="list-amount" step="1" min="0" max="100">
+                                </div>
+                                <div class="inputs">
+                                    <label for="cost">Est. Cost</label>
+                                    <input type="number" name="list-cost" id="list-cost" step="1" min="0" max="1000">
+                                </div>
                             </div>
                         </div>
                         
