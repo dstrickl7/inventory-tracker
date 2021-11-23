@@ -67,11 +67,11 @@
                             <div class="inv-item-cont">
                                 <div class="inputs">
                                     <label for="item">Item</label>
-                                    <input type="text" name="item" id="item" required>
+                                    <input type="text" name="item[]" id="item" required>
                                 </div>
                                 <div class="inputs">
                                     <label for="category">Category</label> 
-                                    <select name="category" id="category-select">
+                                    <select name="category[]" id="category-select">
                                         <option value="uncategorized">Uncategorized</option>
                                         <option value="produce">Produce</option>
                                         <option value="meat">Meat & Poultry</option>
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="inputs">
                                     <label for="amount">Amount</label>
-                                    <input type="number" name="amount" id="amount" step=".25" min="0" max="1000">
+                                    <input type="number" name="amount[]" id="amount" step=".25" min="0" max="1000">
                                 </div>
                                 <button class="delete-btn">
                                     <img src="styles/icons/trashcan.svg" alt="Delete">

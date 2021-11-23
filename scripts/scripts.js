@@ -57,6 +57,7 @@ function addSection(section) {
     node.childNodes.forEach((childNode) => {
       if (childNode.id) {
         childNode.id = childNode.id + itemCount.toString();
+        // childNode.name = childNode.name + itemCount.toString();
       }
     });
   });
