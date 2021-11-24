@@ -46,9 +46,11 @@ addInventoryItem.addEventListener("click", () => {
 });
 //
 
-// function addSection(section, parent) {
-//   parent.appendChild(section.cloneNode(true));
-// }
+// Issues:
+/*
+-if first node has values when add btn clicked, values inside of first node are copied to subsequent nodes except the category
+
+*/
 
 function addSection(section) {
   let clone = section.cloneNode(true);

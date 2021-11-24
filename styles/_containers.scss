@@ -56,3 +56,13 @@
   width: 100%;
   @include utilities.flex(space-between, center);
 }
+
+.category-container {
+  width: 100%;
+  @include utilities.flex(center, center, column);
+}
+
+.item-container {
+  @include utilities.flex(center, space-between);
+  width: 100%;
+}

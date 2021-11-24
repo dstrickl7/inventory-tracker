@@ -25,16 +25,23 @@ while($item = $result->fetch_assoc()){
 $result->data_seek(0);
 
 foreach($categories as $category){
-    echo "<div>";
+    echo "<div class='category-container'>";
     echo "<h2 class='category-title'>" . $category . "</h2>";
     
     while($item = $result->fetch_assoc()){
     // If items category matches the current category, print all items, else print next category
+        
         if($item["category"]==$category){
+            echo "<div class='item-container'>";
+            echo "<p>" . $item["item_name"] . "</p>";
             echo "<div>";
-            echo "<p>" . $item["item_name"] . " " . $item["amount"] . $item["unit"] ."</p>";
+            echo "<p>" . $item["amount"] . $item["unit"] ;
+            // Delete button
+            echo "<a href='scripts/delete.php?id=" . $item['id'] . "' role='button' class='delete-btn'><img src='styles/icons/trashcan.svg' alt='Delete'></a>";
+            echo "</div>";
             echo "</div>";
         }
+        
     }
     echo "</div>";
     $result->data_seek(0);
