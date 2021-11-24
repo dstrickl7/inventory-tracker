@@ -17,27 +17,28 @@ while($item = $result->fetch_assoc()){
     if(!in_array($things->category, $categories)){
         array_push($categories, $things->category);
     }
-
-
-    
-   
-    
     
 
-
-    // If there are no items to display say no items, else show items
-
-
-//else{
-    //     echo "<div class='inventory-item'>";
-    //     echo "<p>" . $item[htmlspecialchars("item_name")] . $item["amount"] . $item[htmlspecialchars("unit")] . "</p>";
-    //     echo "</div>";
-    // } 
 }
+
+
+$result->data_seek(0);
+
 foreach($categories as $category){
-    echo "<div class='inventory-item'>";
-    echo "<h2>" . $category . "</h2>";
+    echo "<div>";
+    echo "<h2 class='category-title'>" . $category . "</h2>";
+    
+    while($item = $result->fetch_assoc()){
+    // If items category matches the current category, print all items, else print next category
+        if($item["category"]==$category){
+            echo "<div>";
+            echo "<p>" . $item["item_name"] . " " . $item["amount"] . $item["unit"] ."</p>";
+            echo "</div>";
+        }
+    }
     echo "</div>";
+    $result->data_seek(0);
+    
 }
 
 if(count($categories)==0){

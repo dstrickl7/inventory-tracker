@@ -74,24 +74,25 @@
                                     <select name="category[]" id="category-select">
                                         <option value="uncategorized">Uncategorized</option>
                                         <option value="produce">Produce</option>
-                                        <option value="meat">Meat & Poultry</option>
-                                        <option value="dairy">Dairy & Eggs</option>
-                                        <option value="grains">Grains, Rice, & Beans</option>
-                                        <option value="spices">Spices & Seasonings</option>
+                                        <option value="meat & poultry">Meat & Poultry</option>
+                                        <option value="dairy & eggs">Dairy & Eggs</option>
+                                        <option value="grains, rice, & beans">Grains, Rice, & Beans</option>
+                                        <option value="spices & seasonings">Spices & Seasonings</option>
+                                        <option value="baking essentials">Baking Essentials</option>
                                     </select>
                                 </div>
                                 <div class="inputs">
                                     <label for="amount">Amount</label>
                                     <input type="number" name="amount[]" id="amount" step=".25" min="0" max="1000">
                                 </div>
-                                <button class="delete-btn">
+                                <button class="delete-btn" type="button">
                                     <img src="styles/icons/trashcan.svg" alt="Delete">
                                 </button>
                             </div>
                         </div>
 
                         <div class="btn-container">
-                            <button class="btn-nofill btn" id="add-item-inv">More items</button>
+                            <button class="btn-nofill btn" id="add-item-inv" type="button">More items</button>
                             <button type="submit" class="btn-fill btn">Save</button>
                         </div>   
                     </form>
@@ -111,7 +112,7 @@
                
                 <!-- Button to add items -->
                 <div class="btn-container">
-                    <button class="add-btn btn-fill btn" id="add-list">Add Items</button>
+                    <button class="add-btn btn-fill btn" id="add-list" type="button">Add Items</button>
                 </div>
                 
             </div>
@@ -140,11 +141,14 @@
                                     <label for="cost">Est. Cost</label>
                                     <input type="number" name="list-cost" id="list-cost" step="1" min="0" max="1000">
                                 </div>
+                                <button class="delete-btn" type="button">
+                                    <img src="styles/icons/trashcan.svg" alt="Delete">
+                                </button>
                             </div>
                         </div>
                         
                         <div class="btn-container">
-                            <button class="btn-nofill btn" id="add-item-list">More items</button>
+                            <button class="btn-nofill btn" id="add-item-list" type="button">More items</button>
                             <button type="submit" class="btn-fill btn">Save</button>
                         </div>
                     </form>

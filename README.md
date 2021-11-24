@@ -28,7 +28,7 @@ The project should accomplish:
 - The app should keep track of and remember what items have been added 
 - User should be able to search and filter through items 
 
-Additional
+Future Additions
 
 - App suggests items that need to be added to shopping list based on current inventory and frequency of use of item
 - App suggests meal ideas using items on hand 
@@ -44,6 +44,7 @@ Additional
 - Live Site URL: [title](address)
 
 ## My process
+This project came about because I wanted a way to keep track of the grocery items I already had whenever I went to the store. I started by making a design in VS Code starting with mobile and finishing with desktop. I next set up my database with MySQL and wrote out an HTML skeleton in psuedo code. Once I felt I had all the pieces I needed, I made my HTML skeleton and started some basic SCSS to help me visualize as I code. Next came the logic. I wrote script by script in order to learn and make the logic more compartmentalized. Once the main CRUD is completed, minor scripts used for user experience will be written alongside my SCSS.
 
 ### Built with
 
@@ -54,7 +55,9 @@ Additional
 - PHP
 
 ### What I learned
-
+- CRUD with PHP and MySQL
+- Creating and manipulating MySQL tables
+- Inserting JSON data into MySQL tables
 
 
 ```js
@@ -63,7 +66,8 @@ Additional
 
 ### Challenges
 
-- 
+- I am currently struggling with the logic of how to filter items by category and dynamically print them to the screen.
+- Determining whether and when to use MySQL queries vs using and handling data as JSON
 
 ### Continued development
 
