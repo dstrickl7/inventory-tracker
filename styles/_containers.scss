@@ -52,17 +52,43 @@
   }
 }
 
+.inputs:nth-child(3) {
+  width: 15%;
+}
+
+.inputs:nth-child(4) {
+  width: 15%;
+}
+
+.update-form {
+  width: 90%;
+}
+
+.update-inputs {
+  width: 30%;
+  margin: 0 0.25rem;
+  @include utilities.flex(center, normal);
+  input,
+  select {
+    max-width: 90%;
+  }
+}
+
 .btn-container {
   width: 100%;
-  @include utilities.flex(space-between, center);
+  @include utilities.flex(center, center);
 }
 
 .category-container {
-  width: 100%;
+  width: 90%;
   @include utilities.flex(center, center, column);
 }
 
 .item-container {
   @include utilities.flex(center, space-between);
   width: 100%;
+}
+
+.item-amount-cont {
+  @include utilities.flex(center, space-between);
 }

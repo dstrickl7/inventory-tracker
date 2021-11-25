@@ -49,6 +49,7 @@ addInventoryItem.addEventListener("click", () => {
 // Issues:
 /*
 -if first node has values when add btn clicked, values inside of first node are copied to subsequent nodes except the category
+-change from .after because the new row is added directly under the first node
 
 */
 

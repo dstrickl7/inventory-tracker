@@ -85,6 +85,15 @@
                                     <label for="amount">Amount</label>
                                     <input type="number" name="amount[]" id="amount" step=".25" min="0" max="1000">
                                 </div>
+                                <div class="inputs">
+                                    <label for="unit">Units</label> 
+                                    <select name="unit[]" id="unit-select">
+                                        <option value="ea">ea</option>
+                                        <option value="lbs">lbs</option>
+                                        <option value="pcs">pcs</option>
+                                        <option value="cntr">cntr</option>
+                                    </select>
+                                </div>
                                 <button class="delete-btn" type="button">
                                     <img src="styles/icons/trashcan.svg" alt="Delete">
                                 </button>
