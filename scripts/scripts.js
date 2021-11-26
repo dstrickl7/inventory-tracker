@@ -11,7 +11,9 @@ const overlay = document.querySelector(".overlay");
 const addContClose = document.querySelector(".add-container-close");
 const addInventoryItem = document.querySelector("#add-item-inv");
 const addListItem = document.querySelector("#add-item-list");
+const invItemsCont = document.querySelector(".inv-items-cont");
 const invItemCont = document.querySelector(".inv-item-cont");
+const removeItemBtn = document.querySelector(".add-item-delete");
 
 // Edit inventory item variables
 const editBtn = document.querySelectorAll(".update-btn");
@@ -47,7 +49,7 @@ addContClose.addEventListener("click", () => {
 let itemCount = 1;
 
 addInventoryItem.addEventListener("click", () => {
-  addSection(invItemCont);
+  addSection(invItemsCont, invItemCont);
   itemCount++;
 });
 
@@ -58,23 +60,39 @@ addInventoryItem.addEventListener("click", () => {
 
 */
 
-function addSection(section) {
+function addSection(parent, section) {
   let clone = section.cloneNode(true);
-  section.after(clone);
+  parent.append(clone);
   clone.childNodes.forEach((node) => {
     node.childNodes.forEach((childNode) => {
       if (childNode.id) {
         childNode.id = childNode.id + itemCount.toString();
+        childNode.value = "";
         // childNode.name = childNode.name + itemCount.toString();
       }
     });
+    if (node.id) {
+      node.id = node.id + itemCount.toString();
+    }
   });
 }
 
-cancelBtn.addEventListener("click", () => {
-  editContainer.classList.toggle("closed");
-  editOverlay.classList.remove("active");
-});
+// if(){
+//   removeItemBtn.forEach(btn => ()=>{
+//     btn.addEventListener("click", ()=>{
+//       if(btn.id==){
+
+//       }
+//     })
+//   });
+// }
+
+if (cancelBtn) {
+  cancelBtn.addEventListener("click", () => {
+    editContainer.classList.toggle("closed");
+    editOverlay.classList.remove("active");
+  });
+}
 
 // editBtn.forEach((btn) =>
 //   btn.addEventListener("click", () => {
