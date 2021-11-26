@@ -4,6 +4,7 @@
 @use "inventory";
 @use "list";
 @use "buttons";
+@use "text";
 
 * {
   box-sizing: border-box;
@@ -27,9 +28,14 @@ body {
   z-index: 5;
 }
 
-.title {
-  font-size: 1.25rem;
-  font-weight: 700;
+.overlay-edit.active {
+  background-color: utilities.$black;
+  opacity: 70%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
 }
 
 .add-container-close {
@@ -40,8 +46,4 @@ body {
   path {
     fill: utilities.$green;
   }
-}
-
-label {
-  font-weight: 600;
 }

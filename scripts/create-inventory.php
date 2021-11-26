@@ -8,6 +8,7 @@ $category = $_POST["category"];
 $amount = $_POST["amount"];
 $unit = $_POST["unit"];
 
+
 // Add ability to sanitize user inputs
 // MySQL command
 
@@ -32,12 +33,6 @@ $conn->query($sql);
 }
 // Close connection
 $conn->close();
-   
-
-
-   
-
-
 
 // Return to main page
 header("location: ../index.php");

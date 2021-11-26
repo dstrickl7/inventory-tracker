@@ -17,32 +17,55 @@ while($item = $result->fetch_assoc()){
 
     if (isset($_GET['id']) && $item['id'] == $_GET['id']) {
         // Form displays at top of container and does not show the item name of the item it's altering. Changes are also not saved
-        echo '<form action="scripts/update.php" method="POST" class="update-form">';
-            echo "<div class='update-inputs'>";
-                echo "<input type='text' name='item' value='" . $item["item_name"] . "'>";
-
-        echo "<select name='category' value='" . $item["category"] . "' >
-            <option value='uncategorized'>Uncategorized</option>
-            <option value='produce'>Produce</option>
-            <option value='meat & poultry'>Meat & Poultry</option>
-            <option value='dairy & eggs'>Dairy & Eggs</option>
-            <option value='grains, rice, & beans'>Grains, Rice, & Beans</option>
-            <option value='spices & seasonings'>Spices & Seasonings</option>
-            <option value='baking essentials'>Baking Essentials</option>
-        </select>";
-
-                echo "<input type='number' name='amount' step='.25' min='0' max='1000' value='" . $item["amount"] . "'>";
-            
-                echo "<select name='unit' value='" . $item['unit'] . "'>
-                    <option value='ea'>ea</option>
-                    <option value='lbs'>lbs</option>
-                    <option value='pcs'>pcs</option>
-                    <option value='cntr'>cntr</option>
-                </select>";
-                echo '<button type="submit">Save</button>';
-                echo '<input type="hidden" name="id" value="'.$item['id'].'">';
+       echo "<div class='overlay-edit active'></div>";
+        echo "<div class='container inventory-edit'>";
+            echo "<svg class='edit-close' xmlns='http://www.w3.org/2000/svg' width='15.556' height='15.556' viewBox='0 0 15.556 15.556'>";
+                echo "<path fill='#000000' d='M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z' transform='translate(-0.222 -0.222)' fill-rule='evenodd'/>";
+            echo "</svg>";
+            echo '<form action="scripts/update.php" method="POST" class="update-form-container">'; 
+                echo "<div class='inv-items-cont'>";
+                    echo "<div class='inv-item-cont'>";   
+                        /*Item name input */
+                        echo "<div class='inputs'>";
+                                echo "<input type='text' name='item' value='" . $item["item_name"] . "'>";
+                        echo "</div>";
+                        /*Item category input */
+                        echo "<div class='inputs'>";
+                            echo "<select name='category' value='" . $item["category"] . "' >
+                                <option value='uncategorized'>Uncategorized</option>
+                                <option value='produce'>Produce</option>
+                                <option value='meat & poultry'>Meat & Poultry</option>
+                                <option value='dairy & eggs'>Dairy & Eggs</option>
+                                <option value='grains, rice, & beans'>Grains, Rice, & Beans</option>
+                                <option value='spices & seasonings'>Spices & Seasonings</option>
+                                <option value='baking essentials'>Baking Essentials</option>
+                            </select>";
+                        echo "</div>";
+                        /*Item amount input */
+                        echo "<div class='inputs'>";
+                                echo "<input type='number' name='amount' step='.25' min='0' max='1000' value='" . $item["amount"] . "'>";
+                        echo "</div>";
+                        /*Item unit input */
+                        echo "<div class='inputs'>";
+                            echo "<select name='unit' value='" . $item['unit'] . "'>
+                            <option value='ea'>ea</option>
+                            <option value='lbs'>lbs</option>
+                            <option value='pcs'>pcs</option>
+                            <option value='cntr'>cntr</option>
+                            </select>";
+                        echo "</div>";
+                    echo "</div>";
+                echo "</div>";
+            /*Save button */
+            echo "<div class='btn-container'>";
+            echo '<button type="button" class="btn-fill-pink btn" id="cancel">Cancel</button>';
+                echo '<button type="submit" class="btn-fill-green btn">Save</button>';
             echo "</div>";
+                echo '<input type="hidden" name="id" value="'.$item['id'].'">';
+            
         echo '</form>';
+    echo "</div>";
+        
     }
     
 }
@@ -56,27 +79,11 @@ foreach($categories as $category){
     echo "<h2 class='category-title'>" . $category . "</h2>";
     // Dynamically add items to their respective categories
     while($item = $result->fetch_assoc()){
-    
-    if (isset($_GET['id']) && $item['id'] == $_GET['id']) {
-    //     // Form displays for every category and does not show the item name of the item it's altering
-    //     echo '<form action="scripts/update.php" method="POST">';
-
-    //     echo "<input type='number' name='amount[]' step='.25' min='0' max='1000' value='" . $item["amount"] . "'>";
-    
-    //     echo "<select name='unit[]' value='" .$item['unit'] . "'>
-    //     <option value='ea'>ea</option>
-    //     <option value='lbs'>lbs</option>
-    //     <option value='pcs'>pcs</option>
-    //     <option value='cntr'>cntr</option>
-    //     </select>";
-    //     echo '<button type="submit">Save</button>';
-    //     echo '<input type="hidden" name="id" value="'.$item['id'].'">';
-    //     echo '</form>';
-    }else{
-        // If items category matches the current category, print all items
         if($item["category"]==$category){
+        // If items category matches the current category, print all items
+        
             echo "<div class='item-container'>";
-            echo "<p>" . $item["item_name"] . "</p>";
+            echo "<p class='item-name'>" . $item["item_name"] . "</p>";
                 echo "<div class='item-amount-cont'>";
                 echo "<p>" . $item["amount"] . $item["unit"] . "</p>" ;
                     echo "<div class='btn-container'>";
@@ -87,28 +94,16 @@ foreach($categories as $category){
                     echo "</div>";
                 echo "</div>";
             echo "</div>";
-        }
-    }
-    
-        
+        }    
     }
     echo "</div>";
     $result->data_seek(0);
     
 }
 
-
-
 if(count($categories)==0){
     echo "<p>No items</p>";
     echo "<p>You should probably go shopping</p>";
 }
 
-
-
 ?>
-
-<!-- Sort by category -->
-<!-- 
-    If items category is the same, print items together
- -->

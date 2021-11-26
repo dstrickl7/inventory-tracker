@@ -22,10 +22,10 @@
                 <a href="#" aria-label="homepage" class="logo-text"><img src="../styles/icons/shopping-list.svg" alt="The Kitchen Tracker" class="logo-img">The Kitchen Tracker</a>
             </div>
             <div class="nav-icon-container">
-                <button class="nav-icon hamburger">
+                <button class="nav-icon hamburger" type="button">
                     <img src="../styles/icons/hamburger.svg" alt="open menu" class="nav-icon-img">
                 </button>
-                <button class="nav-icon close">
+                <button class="nav-icon close" type="button">
                     <img src="../styles/icons/icon-close.svg" alt="close menu" class="nav-icon-img">
                 </button>
             </div>
@@ -51,7 +51,7 @@
                 
                 <!-- Button to add items -->
                 <div class="btn-container">
-                    <button class="add-btn btn-fill btn" id="add-inventory">Add Items</button>
+                    <button class="add-btn btn-fill-green btn" id="add-inventory">Add Items</button>
                 </div>
                 
             </div>
@@ -78,6 +78,7 @@
                                         <option value="dairy & eggs">Dairy & Eggs</option>
                                         <option value="grains, rice, & beans">Grains, Rice, & Beans</option>
                                         <option value="spices & seasonings">Spices & Seasonings</option>
+                                        <option value="condiments, vinegars, & oils">Condiments, Vinegars, & Oils</option>
                                         <option value="baking essentials">Baking Essentials</option>
                                     </select>
                                 </div>
@@ -101,8 +102,8 @@
                         </div>
 
                         <div class="btn-container">
-                            <button class="btn-nofill btn" id="add-item-inv" type="button">More items</button>
-                            <button type="submit" class="btn-fill btn">Save</button>
+                            <button class="btn-nofill-green btn" id="add-item-inv" type="button">More items</button>
+                            <button type="submit" class="btn-fill-green btn">Save</button>
                         </div>   
                     </form>
                     <!-- Form ends -->
@@ -121,7 +122,7 @@
                
                 <!-- Button to add items -->
                 <div class="btn-container">
-                    <button class="add-btn btn-fill btn" id="add-list" type="button">Add Items</button>
+                    <button class="add-btn btn-fill-green btn" id="add-list" type="button">Add Items</button>
                 </div>
                 
             </div>
@@ -157,8 +158,8 @@
                         </div>
                         
                         <div class="btn-container">
-                            <button class="btn-nofill btn" id="add-item-list" type="button">More items</button>
-                            <button type="submit" class="btn-fill btn">Save</button>
+                            <button class="btn-nofill-green btn" id="add-item-list" type="button">More items</button>
+                            <button type="submit" class="btn-fill-green btn">Save</button>
                         </div>
                     </form>
                 <!-- Form ends -->

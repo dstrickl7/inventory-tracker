@@ -13,6 +13,12 @@ const addInventoryItem = document.querySelector("#add-item-inv");
 const addListItem = document.querySelector("#add-item-list");
 const invItemCont = document.querySelector(".inv-item-cont");
 
+// Edit inventory item variables
+const editBtn = document.querySelectorAll(".update-btn");
+const editContainer = document.querySelector(".inventory-edit");
+const cancelBtn = document.querySelector("#cancel");
+const editOverlay = document.querySelector(".overlay-edit");
+
 // Open mobile nav
 hamburger.addEventListener("click", () => {
   navlist.classList.toggle("active");
@@ -44,7 +50,6 @@ addInventoryItem.addEventListener("click", () => {
   addSection(invItemCont);
   itemCount++;
 });
-//
 
 // Issues:
 /*
@@ -65,4 +70,19 @@ function addSection(section) {
     });
   });
 }
-// Create a count. For each clone, add 1 to count and create new clone id with value concatenated to it
+
+cancelBtn.addEventListener("click", () => {
+  editContainer.classList.toggle("closed");
+  editOverlay.classList.remove("active");
+});
+
+// editBtn.forEach((btn) =>
+//   btn.addEventListener("click", () => {
+//     overlay.classList.toggle("active");
+//   })
+// );
+
+// addContClose.addEventListener("click", () => {
+//   addContainer.classList.toggle("active");
+//   overlay.classList.toggle("active");
+// });

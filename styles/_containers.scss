@@ -30,7 +30,8 @@
   z-index: 10;
 }
 
-.form-container {
+.form-container,
+.update-form-container {
   width: 100%;
   @include utilities.flex(normal, center, column);
   margin-top: 0.5rem;
@@ -60,20 +61,6 @@
   width: 15%;
 }
 
-.update-form {
-  width: 90%;
-}
-
-.update-inputs {
-  width: 30%;
-  margin: 0 0.25rem;
-  @include utilities.flex(center, normal);
-  input,
-  select {
-    max-width: 90%;
-  }
-}
-
 .btn-container {
   width: 100%;
   @include utilities.flex(center, center);
@@ -91,4 +78,18 @@
 
 .item-amount-cont {
   @include utilities.flex(center, space-between);
+}
+
+.inventory-edit {
+  width: 90%;
+  @include utilities.flex(center, space-between);
+  position: absolute;
+  width: 80%;
+  top: 40%;
+  z-index: 10;
+  border: inset 0.1rem transparent;
+}
+
+.inventory-edit.closed {
+  display: none;
 }
