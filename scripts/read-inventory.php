@@ -38,6 +38,7 @@ while($item = $result->fetch_assoc()){
                                 <option value='dairy & eggs'>Dairy & Eggs</option>
                                 <option value='grains, rice, & beans'>Grains, Rice, & Beans</option>
                                 <option value='spices & seasonings'>Spices & Seasonings</option>
+                                <option value='condiments, vinegars, & oils'>Condiments, Vinegars, & Oils</option>
                                 <option value='baking essentials'>Baking Essentials</option>
                             </select>";
                         echo "</div>";
@@ -59,7 +60,6 @@ while($item = $result->fetch_assoc()){
                 echo "</div>";
             /*Save button */
             echo "<div class='btn-container'>";
-            echo '<button type="button" class="btn-fill-pink btn" id="cancel">Cancel</button>';
                 echo '<button type="submit" class="btn-fill-green btn">Save</button>';
             echo "</div>";
                 echo '<input type="hidden" name="id" value="'.$item['id'].'">';

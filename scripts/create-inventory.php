@@ -23,12 +23,13 @@ for($i = 0; $i < count($_POST['item']); $i++) {
     $stmt = $conn->prepare($sql);
     
     
-    $stmt->bind_param("sisss", $item[$i], $amount[$i], $category[$i], $unit[$i], $json_array) ;
+    $stmt->bind_param("sdsss", $item[$i], $amount[$i], $category[$i], $unit[$i], $json_array) ;
     $stmt->execute();
 }
 
 
 // Close connection
+$stmt->close();
 $conn->close();
 
 // Return to main page

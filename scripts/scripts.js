@@ -19,7 +19,7 @@ let itemCount = 1;
 // Edit inventory item variables
 const editBtn = document.querySelectorAll(".update-btn");
 const editContainer = document.querySelector(".inventory-edit");
-const cancelBtn = document.querySelector("#cancel");
+const editClose = document.querySelector(".edit-close");
 const editOverlay = document.querySelector(".overlay-edit");
 
 // Open mobile nav
@@ -72,8 +72,8 @@ function addSection(parent, section) {
 
 // close edit item container
 
-if (cancelBtn) {
-  cancelBtn.addEventListener("click", () => {
+if (editClose) {
+  editClose.addEventListener("click", () => {
     editContainer.classList.toggle("closed");
     editOverlay.classList.remove("active");
   });
