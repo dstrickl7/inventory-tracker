@@ -33,6 +33,7 @@
                 <ul class="navlist">
                     <li class="navitem"><a href="" class="navlink">Inventory</a></li>
                     <li class="navitem"><a href="" class="navlink">Shopping List</a></li>
+                    <li class="navitem"><a href="" class="navlink">Search</a></li>
                 </ul>
             </div>     
         </nav>
@@ -91,6 +92,7 @@
                                     <select name="unit[]" id="unit-select">
                                         <option value="ea">ea</option>
                                         <option value="lbs">lbs</option>
+                                        <option value="oz">oz</option>
                                         <option value="pcs">pcs</option>
                                         <option value="cntr">cntr</option>
                                     </select>

@@ -290,14 +290,15 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
 .category-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .item-name {
