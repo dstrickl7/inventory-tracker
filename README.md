@@ -35,6 +35,7 @@ Future Additions
 
 ### Screenshot
 
+![](./styles/images/design.png)
 ![](./my-page.png)
 
 

@@ -50,6 +50,7 @@ while($item = $result->fetch_assoc()){
                             echo "<select name='unit' value='" . $item['unit'] . "'>
                             <option value='ea'>ea</option>
                             <option value='lbs'>lbs</option>
+                            <option value='oz'>oz</option>
                             <option value='pcs'>pcs</option>
                             <option value='cntr'>cntr</option>
                             </select>";
