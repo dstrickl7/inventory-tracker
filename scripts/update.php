@@ -12,8 +12,17 @@ $my_array = Array(
     "category"=> $category,
     "unit"=> $unit);
 $json_array = json_encode($my_array);
-$sql= "UPDATE inventory SET item_name='$item', amount='$amount', unit='$unit', category='$category', item_info='$json_array' WHERE id='$id'";
-$result = $conn->query($sql);
+
+$sql = "UPDATE inventory SET item_name=?, amount=?, category=?, unit=?, item_info=? WHERE id=?";
+
+$stmt = $conn->prepare($sql);
+
+$stmt->bind_param("sdsssi", $item, $amount, $category, $unit, $json_array, $id) ;
+$stmt->execute();
+
+
+// Close connection
+$stmt->close();
 $conn->close();
 header("location: ../index.php");
 ?>
