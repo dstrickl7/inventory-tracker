@@ -35,13 +35,15 @@ Future Additions
 
 ### Screenshot
 
+**Original mobile design**
 ![](/styles/images/design.png)
-![](./my-page.png)
+**Finished product**
+![](/styles/images/screenshot.png)
 
 
 ### Links
 
-- Solution URL: [Github](address)
+- Solution URL: [Github](https://github.com/dstrickl7/inventory-tracker)
 - Live Site URL: [title](address)
 
 ## My process

@@ -9,15 +9,7 @@ $amount = $_POST["amount"];
 $unit = $_POST["unit"];
 
 
-// Add ability to sanitize user inputs
-// MySQL command
-
-
-
-
-
-// Insert a loop that checks the number of items are present and inserts each item into the db
-
+// Checks the number of items are present and inserts each item into the db
 for($i = 0; $i < count($_POST['item']); $i++) {
     $my_array = Array(
         "name"=>$item[$i],
@@ -26,11 +18,16 @@ for($i = 0; $i < count($_POST['item']); $i++) {
         "unit"=> $unit[$i]);
     $json_array = json_encode($my_array);
 
-    $sql = "INSERT INTO inventory(item_name, amount, category, unit, item_info) VALUES ('$item[$i]', '$amount[$i]','$category[$i]', '$unit[$i]', '$json_array')";
-    // Attempt connection and execute sql command
-$conn->query($sql);
+    $sql = "INSERT INTO inventory(item_name, amount, category, unit, item_info) VALUES (?,?,?,?,?)";
 
+    $stmt = $conn->prepare($sql);
+    
+    
+    $stmt->bind_param("sisss", $item[$i], $amount[$i], $category[$i], $unit[$i], $json_array) ;
+    $stmt->execute();
 }
+
+
 // Close connection
 $conn->close();
 
