@@ -1,11 +1,12 @@
 <?php
 include 'config.php';
 
-$id = $_POST['id'];
-$item =$_POST['item'];
-$amount =$_POST['amount'];
-$unit =$_POST['unit'];
-$category = $_POST['category'];
+$id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
+$item = filter_input(INPUT_POST,"item", FILTER_SANITIZE_STRING);
+$category = filter_input(INPUT_POST, "category", FILTER_SANITIZE_STRING);
+$amount = filter_input(INPUT_POST, "amount", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+$unit = filter_input(INPUT_POST, "unit", FILTER_SANITIZE_STRING);
+
 $my_array = Array(
     "name"=>$item,
     "amount"=> $amount,

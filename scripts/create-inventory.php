@@ -3,10 +3,29 @@
 include "config.php";
 
 // Variables
+
 $item = $_POST["item"];
 $category = $_POST["category"];
-$amount = $_POST["amount"];
+$amount = $_POST["amount"]; 
 $unit = $_POST["unit"];
+
+/*Possibly unable to validate inputs because input names(in index.php) are arrays/indicate array */
+
+/*
+$item = filter_var($itemInput, FILTER_SANITIZE_STRING);
+$category = filter_var($categoryInput, FILTER_SANITIZE_STRING);
+$amount = filter_var($amountInput, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+$unit = filter_var($unitInput, FILTER_SANITIZE_STRING);
+*/
+/*
+$item = filter_input_array(INPUT_POST,"item", FILTER_SANITIZE_STRING);
+$category = filter_input_array(INPUT_POST, "category", FILTER_SANITIZE_STRING);
+$amount = filter_input_array(INPUT_POST, "amount", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+$unit = filter_input_array(INPUT_POST, "unit", FILTER_SANITIZE_STRING);
+*/
+
+
+
 
 
 // Checks the number of items are present and inserts each item into the db
