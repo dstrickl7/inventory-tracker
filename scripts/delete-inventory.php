@@ -2,7 +2,7 @@
 // Include config file
 include "config.php";
 
-$id = $_GET['id']; //Get id from row Delete was clicked
+$id = $_GET['id'];
 
 $sql= "DELETE FROM inventory WHERE id=?";
 $stmt = $conn->prepare($sql);
