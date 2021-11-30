@@ -66,9 +66,7 @@ while($item = $result->fetch_assoc()){
             
         echo '</form>';
     echo "</div>";
-        
-    }
-    
+    }    
 }
 
 // reset the result pointer to first row

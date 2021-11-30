@@ -93,3 +93,9 @@
 .inventory-edit.closed {
   display: none;
 }
+
+@media (min-width: 900px) {
+  .scroll-container {
+    overflow-y: auto;
+  }
+}
