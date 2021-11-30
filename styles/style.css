@@ -146,7 +146,7 @@
 }
 
 .inv-item-cont,
-.input-container-li {
+.li-item-cont {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -167,11 +167,11 @@
   max-width: 100%;
 }
 
-.inputs:nth-child(3) {
+.amt-input {
   width: 15%;
 }
 
-.inputs:nth-child(4) {
+.unit-input {
   width: 15%;
 }
 
@@ -234,6 +234,10 @@
   justify-content: center;
   align-items: center;
   padding-top: 1.5rem;
+}
+
+.inventory.inactive {
+  display: none;
 }
 
 .list {
@@ -353,6 +357,7 @@ body {
 }
 
 .add-container-close,
+.list-add-container-close,
 .edit-close {
   position: absolute;
   top: 5%;
@@ -360,6 +365,7 @@ body {
   z-index: 10;
 }
 .add-container-close path,
+.list-add-container-close path,
 .edit-close path {
   fill: #57ad45;
 }

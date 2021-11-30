@@ -13,7 +13,7 @@ $amountFilter = array(
                     )
 );
 
-// $pattern = '/([0-9]*\.{0,1}[0-9]*)/';
+// $pattern = '/[0-9]*\.{0,1}[0-9]*/';
 
 $item = filter_var_array($_POST["item"] , FILTER_SANITIZE_STRING);
 $category = filter_var_array($_POST["category"] , FILTER_SANITIZE_STRING);

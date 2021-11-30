@@ -37,8 +37,10 @@
   margin-top: 0.5rem;
 }
 
+// Add items container
+
 .inv-item-cont,
-.input-container-li {
+.li-item-cont {
   @include utilities.flex(center, center);
   margin-top: 1rem;
 }
@@ -53,11 +55,11 @@
   }
 }
 
-.inputs:nth-child(3) {
+.amt-input {
   width: 15%;
 }
 
-.inputs:nth-child(4) {
+.unit-input {
   width: 15%;
 }
 

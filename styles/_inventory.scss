@@ -4,3 +4,7 @@
   @include utilities.flex(center, center, column);
   padding-top: 1.5rem;
 }
+
+.inventory.inactive {
+  display: none;
+}

@@ -43,11 +43,11 @@ while($item = $result->fetch_assoc()){
                             </select>";
                         echo "</div>";
                         /*Item amount input */
-                        echo "<div class='inputs'>";
+                        echo "<div class='inputs amt-input'>";
                                 echo "<input type='number' name='amount' step='.25' min='0' max='1000' value='" . $item["amount"] . "'>";
                         echo "</div>";
                         /*Item unit input */
-                        echo "<div class='inputs'>";
+                        echo "<div class='inputs unit-input'>";
                             echo "<select name='unit' value='" . $item['unit'] . "'>
                             <option value='ea'>ea</option>
                             <option value='lbs'>lbs</option>

@@ -3,14 +3,18 @@ const hamburger = document.querySelector(".hamburger");
 const close = document.querySelector(".close");
 const navlist = document.querySelector(".navlist-container");
 
-// Add Inventory container variables
+// Switch to list view variables
+const list = document.querySelector(".list");
+const toInvLink = document.querySelector("#toInv");
+const toListLink = document.querySelector("#toList");
+const inventory = document.querySelector(".inventory");
+
+// Add Inventory item container variables
 const addInventory = document.querySelector("#add-inventory");
-const addList = document.querySelector("#add-list");
 const addContainer = document.querySelector(".inventory-add");
 const overlay = document.querySelector(".overlay");
 const addContClose = document.querySelector(".add-container-close");
 const addInventoryItem = document.querySelector("#add-item-inv");
-const addListItem = document.querySelector("#add-item-list");
 const invItemsCont = document.querySelector(".inv-items-cont");
 const invItemCont = document.querySelector(".inv-item-cont");
 const removeItemBtn = document.querySelector(".add-item-delete");
@@ -78,3 +82,16 @@ if (editClose) {
     editOverlay.classList.remove("active");
   });
 }
+
+// Switch to list view
+
+toListLink.addEventListener("click", () => {
+  list.classList.add("active");
+  inventory.classList.add("inactive");
+});
+
+// Switch to inventory view
+toInvLink.addEventListener("click", () => {
+  list.classList.remove("active");
+  inventory.classList.remove("inactive");
+});
