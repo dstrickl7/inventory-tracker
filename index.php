@@ -152,7 +152,7 @@
                             </div>
                             <div class="inputs">
                                 <label for="cost">Est. Cost</label>
-                                <input type="number" name="list-cost" id="list-cost" step=".01" min="0" max="1000">
+                                <input type="number" name="list-cost[]" id="list-cost" step=".01" min="0" max="1000">
                             </div>
                             <button class="delete-btn add-item-delete" id="removeItem" type="button">
                                 <img src="styles/icons/trashcan.svg" alt="Delete">

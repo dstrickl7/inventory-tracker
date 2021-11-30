@@ -88,10 +88,12 @@ if (editClose) {
 toListLink.addEventListener("click", () => {
   list.classList.add("active");
   inventory.classList.add("inactive");
+  close.click();
 });
 
 // Switch to inventory view
 toInvLink.addEventListener("click", () => {
   list.classList.remove("active");
   inventory.classList.remove("inactive");
+  close.click();
 });

@@ -5,8 +5,6 @@ include "config.php";
 // Variables
 
 $amount = $_POST["amount"]; 
-
-
 $amountFilter = array(
     "amount"=> array('filter'=> FILTER_SANITIZE_NUMBER_FLOAT,
                     'flags'=> FILTER_FLAG_ALLOW_FRACTION

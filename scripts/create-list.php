@@ -3,17 +3,27 @@
 include "config.php";
 
 // Variables
-$list_item = $_POST["list_item"];
-$list_amount = $_POST["list_amount"];
-$list_cost = $_POST["list_cost"];
+$list_item = filter_var_array($_POST["list-item"] , FILTER_SANITIZE_STRING);
+$list_amount = filter_var_array($_POST["list-amount"] , FILTER_SANITIZE_NUMBER_INT);
+$list_cost = $_POST["list-cost"];
 
-// MySQL command
-$sql = "INSERT INTO list(item_name, amount, cost) VALUES ($list_item, $list_amount, $list_cost)";
-// Attempt connection and execute sql command
+// MySQL command stored inside variable
+for($i = 0; $i < count($_POST['list-item']); $i++) {
+    $my_array = Array(
+        "name"=>$list_item[$i],
+        "amount"=> $list_amount[$i],
+        "cost"=> $list_cost[$i]);
+    $json_array = json_encode($my_array);
 
-$conn->query($sql);
+    $sql = "INSERT INTO list(item_name, amount, cost, item_info) values (?,?,?,?)";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sids", $list_item[$i], $list_amount[$i], $list_cost[$i], $json_array);
+    $stmt->execute();
+}
+
+// Close connection
+$stmt->close();
 $conn->close();
-
-
-// Return to main page
-header("location: ../index.php");
+header("location: ../index.php#list");
+?>
