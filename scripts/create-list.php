@@ -5,7 +5,15 @@ include "config.php";
 // Variables
 $list_item = filter_var_array($_POST["list-item"] , FILTER_SANITIZE_STRING);
 $list_amount = filter_var_array($_POST["list-amount"] , FILTER_SANITIZE_NUMBER_INT);
-$list_cost = $_POST["list-cost"];
+// $list_cost = $_POST["list-cost"];
+
+$costArray = $_POST["list-cost"]; 
+$list_cost = Array();
+
+foreach($costArray as $cst){
+    filter_var($cst, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    array_push($list_cost, $cst);
+}
 
 // MySQL command stored inside variable
 for($i = 0; $i < count($_POST['list-item']); $i++) {

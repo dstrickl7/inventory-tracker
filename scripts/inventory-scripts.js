@@ -11,7 +11,7 @@ const addContClose = document.querySelector(".add-container-close");
 const addInventoryItem = document.querySelector("#add-item-inv");
 const invItemsCont = document.querySelector(".inv-items-cont");
 const invItemCont = document.querySelector(".inv-item-cont");
-const removeItemBtn = document.querySelector(".add-item-delete");
+const removeItemBtn = document.querySelectorAll(".add-item-delete");
 let itemCount = 1;
 
 // Edit inventory item variables
@@ -67,6 +67,8 @@ function addSection(parent, section) {
     });
   }
 }
+
+// Delete row from add item container
 
 // close edit item container
 

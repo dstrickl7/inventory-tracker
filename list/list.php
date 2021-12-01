@@ -48,7 +48,9 @@
                 <h1 class="title main-title">List</h1>
             <!-- Display list items -->
                 <div class="scroll-container">
-                    <?php include "../scripts/read-list.php" ;?>
+                    <table>
+                        <?php include "../scripts/read-list.php" ;?>
+                    </table>
                 </div>
             
                 <!-- Button to add items -->
@@ -109,7 +111,6 @@
 
     
     </main>
-    <script src="../scripts/inventory-scripts.js"></script>
     <script src="../scripts/list-scripts.js"></script>
    
 </body>

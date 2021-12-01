@@ -3,7 +3,9 @@
 include "config.php";
 
 // Variables
-
+$item = filter_var_array($_POST["item"] , FILTER_SANITIZE_STRING);
+$category = filter_var_array($_POST["category"] , FILTER_SANITIZE_STRING);
+$unit = filter_var_array($_POST["unit"] , FILTER_SANITIZE_STRING);
 $amountArray = $_POST["amount"]; 
 $amount=Array();
 
@@ -11,12 +13,6 @@ foreach($amountArray as $amt){
     filter_var($amt, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     array_push($amount, $amt);
 }
-
-$item = filter_var_array($_POST["item"] , FILTER_SANITIZE_STRING);
-$category = filter_var_array($_POST["category"] , FILTER_SANITIZE_STRING);
-// $amount = filter_var_array($_POST["amount"] , $amountFilter);
-$unit = filter_var_array($_POST["unit"] , FILTER_SANITIZE_STRING);
-
 
 // Checks the number of items are present and inserts each item into the db
 for($i = 0; $i < count($_POST['item']); $i++) {

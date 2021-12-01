@@ -3,12 +3,19 @@ include 'config.php';
 
 $sql = "SELECT * FROM list";
 $result = $conn->query($sql);
-// For each row in table, dynamically generate the below HTML
-echo "<div class='col-headings'>
-<h2 class='col-title'>Item</h2>
-<h2 class='col-title'>Amount</h2>
-<h2 class='col-title'>Est. Cost</h2>
-</div>";
+
+if($result->fetch_assoc()){
+    echo "<tr>";
+        echo "<th scope='col'>Item</th>";
+        echo "<th scope='col'>Amount</th>";
+        echo "<th scope='col'>Est. Cost</th>";
+        echo " <th scope='col'>Update</th>";
+    echo "</tr>";
+}else{
+    echo "<p>No items</p>";
+}
+$result->data_seek(0);
+
 while($item = $result->fetch_assoc()){
     if (isset($_GET['id']) && $item['id'] == $_GET['id']) {
             echo '<form action="../scripts/update-list.php" method="POST" class="update-form-container">'; 
@@ -38,8 +45,24 @@ while($item = $result->fetch_assoc()){
                 echo '<input type="hidden" name="id" value="'.$item['id'].'">';
         echo '</form>';
     }else{
+
+            echo "<tr>";
+                echo "<td>" . $item["item_name"] . "</td>";
+                echo "<td>" . $item["amount"] . "</td>";
+                echo "<td>" . $item["cost"] . "</td>";
+                echo "<td>";
+                    echo "<div class='list-btn-container .btn-col'>";
+                    // Update button
+                        echo "<a href='list.php?id=" . $item['id'] . "' role='button' class='update-btn'><img src='../styles/icons/shopping-list.svg' alt='Update'></a>";
+                    // Delete button
+                        echo "<a href='../scripts/delete-list.php?id=" . $item['id'] . "' role='button' class='delete-btn'><img src='../styles/icons/trashcan.svg' alt='Delete'></a>";
+                echo "</div>"; 
+                    echo "</td>";
+            echo "</tr>";
+  
+
         
-       
+       /*
         echo "<div class='item-info-cont'>";
             echo "<div class='item-info'>";
                 echo "<p class='item-name'>" . $item["item_name"] . "</p>";
@@ -54,7 +77,7 @@ while($item = $result->fetch_assoc()){
             echo "</div>"; 
         echo "</div>";
 
-        
+        */
 
         
     }    

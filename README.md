@@ -22,7 +22,7 @@
 The project should accomplish: 
 
 - User should be able to add and remove items from a list
-  - User should be able to specify amounts
+  - User should be able to specify amount of item
 - User should be able to add or remove items from inventory 
   - User should be able to add amount of item and can specify units 
 - The app should keep track of and remember what items have been added 
@@ -44,7 +44,7 @@ Future Additions
 ### Links
 
 - Solution URL: [Github](https://github.com/dstrickl7/inventory-tracker)
-- Live Site URL: [title](address)
+- Live Site URL: [Kitchen Tracker](address)
 
 ## My process
 This project came about because I wanted a way to keep track of the grocery items I already had whenever I went to the store. I started by making a design in VS Code starting with mobile and finishing with desktop. I next set up my database with MySQL and wrote out an HTML skeleton in psuedo code. Once I felt I had all the pieces I needed, I made my HTML skeleton and started some basic SCSS to help me visualize as I code. Next came the logic. I wrote script by script in order to learn and make the logic more compartmentalized. Once the main CRUD was completed, minor scripts used for user experience were written alongside my SCSS.
@@ -56,6 +56,7 @@ This project came about because I wanted a way to keep track of the grocery item
 - Mobile-first workflow
 - JavaScript (ES6)
 - PHP
+- MySQL
 
 ### What I learned
 - CRUD with PHP and MySQL
@@ -73,12 +74,12 @@ This project came about because I wanted a way to keep track of the grocery item
   - I decided to do this using the JSON I attached to each item. I created an array and checked each item's category. If the category wasn't already in the array, I pushed the category into it. I then used a mysqli query to run through the items in the database and print them if their category matched. It would probably have made more sense to use the MySQL filter queries, but I wanted to figure out how to insert and manipulate JSON that was in a MySQL database with PHP.
 - Determining whether and when to use MySQL queries vs using and handling data as JSON
   - I am new to PHP and hadn't used MySQL prior. Trying to learn how to work with three different things that I'm unfamiliar with at the same time may have been trying to do too much at one time.
-- I am currently trying to figure out if there is a way to make the update form display in the same place the item the update is happening on instead of appearing at the very top of the inventory container. My current concern is that the foreach loop I'm using to display the categories will make this impossible and I may have to rewrite that logic.
-- Sanitizing inputs. I am currently looking into prepared statements.
+- I wanted to make the update form display in the same place as the item the update was for, however I was unable to use an inline form because of how I wrote my logic. I decided to use css to style the update form so it would be more user-friendly.
+- Sanitizing inputs. I had an array of float values and I could not figure out a way to use the php built in data sanitization on it. I ended up looping through my post array and sanitizing each value individually.
 
 ### Continued development
 
-- 
+- Data sanitization and security. My mentor told me the very first app he deployed fell victim to hacker bots and he ended up with an unexpected bill from his database service.
 
 ### Useful resources
 

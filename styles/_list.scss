@@ -9,11 +9,15 @@
   padding-top: 1.5rem;
 }
 
-.col-headings {
-  @include utilities.flex(center, space-between);
-  width: 90%;
+table {
+  table-layout: fixed;
 }
 
-.col {
-  width: 35%;
+th {
+  text-align: left;
 }
+
+// thead
+// th
+// tr
+// td

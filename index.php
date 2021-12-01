@@ -97,9 +97,8 @@
                                         <option value="cntr">cntr</option>
                                     </select>
                                 </div>
-                                <button class="delete-btn add-item-delete" id="removeItem" type="button">
-                                    <img src="styles/icons/trashcan.svg" alt="Delete">
-                                </button>
+                                <button class="add-item-delete delete-btn" id="removeItem" type="button">
+                                    <img src="styles/icons/trashcan.svg" alt="Delete"></button>
                             </div>
                         </div>
 

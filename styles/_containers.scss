@@ -68,6 +68,10 @@
   @include utilities.flex(center, center);
 }
 
+.list-btn-container {
+  @include utilities.flex(center, center);
+}
+
 .category-container {
   width: 90%;
   @include utilities.flex(center, center, column);

@@ -183,6 +183,13 @@
   align-items: center;
 }
 
+.list-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .category-container {
   width: 90%;
   display: flex;
@@ -266,16 +273,12 @@ list-edit {
   padding-top: 1.5rem;
 }
 
-.col-headings {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
+table {
+  table-layout: fixed;
 }
 
-.col {
-  width: 35%;
+th {
+  text-align: left;
 }
 
 .btn {
@@ -291,7 +294,7 @@ list-edit {
 .delete-btn {
   background-color: transparent;
   border: none;
-  height: 100%;
+  width: 100%;
   margin-left: 0.3rem;
 }
 .delete-btn img {
