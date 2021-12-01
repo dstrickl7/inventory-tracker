@@ -78,6 +78,16 @@
   width: 100%;
 }
 
+.item-info-cont {
+  @include utilities.flex(center, space-between);
+  width: 100%;
+}
+
+.item-info {
+  @include utilities.flex(center, space-between);
+  width: 100%;
+}
+
 .item-amount-cont {
   @include utilities.flex(center, space-between);
 }

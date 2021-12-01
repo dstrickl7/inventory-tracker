@@ -24,5 +24,5 @@ $stmt->execute();
 // Close connection
 $stmt->close();
 $conn->close();
-header("location: ../index.php#list");
+header("location: ../list/list.php");
 ?>

@@ -4,14 +4,13 @@ include "config.php";
 
 // Variables
 
-$amount = $_POST["amount"]; 
-$amountFilter = array(
-    "amount"=> array('filter'=> FILTER_SANITIZE_NUMBER_FLOAT,
-                    'flags'=> FILTER_FLAG_ALLOW_FRACTION
-                    )
-);
+$amountArray = $_POST["amount"]; 
+$amount=Array();
 
-// $pattern = '/[0-9]*\.{0,1}[0-9]*/';
+foreach($amountArray as $amt){
+    filter_var($amt, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    array_push($amount, $amt);
+}
 
 $item = filter_var_array($_POST["item"] , FILTER_SANITIZE_STRING);
 $category = filter_var_array($_POST["category"] , FILTER_SANITIZE_STRING);

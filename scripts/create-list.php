@@ -25,5 +25,5 @@ for($i = 0; $i < count($_POST['list-item']); $i++) {
 // Close connection
 $stmt->close();
 $conn->close();
-header("location: ../index.php#list");
+header("location: ../list/list.php");
 ?>

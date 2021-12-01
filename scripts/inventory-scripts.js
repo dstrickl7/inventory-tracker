@@ -3,12 +3,6 @@ const hamburger = document.querySelector(".hamburger");
 const close = document.querySelector(".close");
 const navlist = document.querySelector(".navlist-container");
 
-// Switch to list view variables
-const list = document.querySelector(".list");
-const toInvLink = document.querySelector("#toInv");
-const toListLink = document.querySelector("#toList");
-const inventory = document.querySelector(".inventory");
-
 // Add Inventory item container variables
 const addInventory = document.querySelector("#add-inventory");
 const addContainer = document.querySelector(".inventory-add");
@@ -82,18 +76,3 @@ if (editClose) {
     editOverlay.classList.remove("active");
   });
 }
-
-// Switch to list view
-
-toListLink.addEventListener("click", () => {
-  list.classList.add("active");
-  inventory.classList.add("inactive");
-  close.click();
-});
-
-// Switch to inventory view
-toInvLink.addEventListener("click", () => {
-  list.classList.remove("active");
-  inventory.classList.remove("inactive");
-  close.click();
-});
