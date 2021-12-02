@@ -11,10 +11,50 @@
 
 table {
   table-layout: fixed;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+thead th:nth-child(1) {
+  width: 15%;
+  text-align: left;
+}
+
+thead th:nth-child(2) {
+  width: 15%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 10%;
 }
 
 th {
+  text-align: center;
+}
+
+td:nth-child(1) {
   text-align: left;
+}
+
+td:nth-child(4) {
+  @include utilities.flex(center, center);
+}
+
+td {
+  text-align: center;
+  input {
+    max-width: 80%;
+  }
+  button {
+    margin: 0;
+  }
+  svg {
+    width: 50%;
+  }
 }
 
 // thead

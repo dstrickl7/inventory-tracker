@@ -5,8 +5,6 @@ include "config.php";
 // Variables
 $list_item = filter_var_array($_POST["list-item"] , FILTER_SANITIZE_STRING);
 $list_amount = filter_var_array($_POST["list-amount"] , FILTER_SANITIZE_NUMBER_INT);
-// $list_cost = $_POST["list-cost"];
-
 $costArray = $_POST["list-cost"]; 
 $list_cost = Array();
 

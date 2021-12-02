@@ -40,12 +40,17 @@ body {
 
 .add-container-close,
 .list-add-container-close,
-.edit-close,
-.list-edit-close {
+.edit-close {
   position: absolute;
   top: 5%;
   right: 5%;
   z-index: 10;
+  path {
+    fill: utilities.$green;
+  }
+}
+
+.list-edit-close {
   path {
     fill: utilities.$green;
   }

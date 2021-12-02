@@ -275,10 +275,53 @@ list-edit {
 
 table {
   table-layout: fixed;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+thead th:nth-child(1) {
+  width: 15%;
+  text-align: left;
+}
+
+thead th:nth-child(2) {
+  width: 15%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 10%;
 }
 
 th {
+  text-align: center;
+}
+
+td:nth-child(1) {
   text-align: left;
+}
+
+td:nth-child(4) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+td {
+  text-align: center;
+}
+td input {
+  max-width: 80%;
+}
+td button {
+  margin: 0;
+}
+td svg {
+  width: 50%;
 }
 
 .btn {
@@ -392,8 +435,7 @@ body {
 
 .add-container-close,
 .list-add-container-close,
-.edit-close,
-.list-edit-close {
+.edit-close {
   position: absolute;
   top: 5%;
   right: 5%;
@@ -401,7 +443,10 @@ body {
 }
 .add-container-close path,
 .list-add-container-close path,
-.edit-close path,
+.edit-close path {
+  fill: #57ad45;
+}
+
 .list-edit-close path {
   fill: #57ad45;
 }
