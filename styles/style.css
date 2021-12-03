@@ -259,6 +259,17 @@ list-edit {
   display: none;
 }
 
+.search-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
 @media (min-width: 900px) {
   .scroll-container {
     overflow-y: auto;

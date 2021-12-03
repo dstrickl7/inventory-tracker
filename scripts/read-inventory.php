@@ -9,6 +9,7 @@ $categories = Array();
 
 // For each row in table, dynamically generate the below HTML
 while($item = $result->fetch_assoc()){
+   
     $things =json_decode($item["item_info"]);
     // check if array has category if it doesn't, push the category into the array
     if(!in_array($things->category, $categories)){
@@ -104,6 +105,8 @@ if(count($categories)==0){
     echo "<p>No items</p>";
     echo "<p>You should probably go shopping</p>";
 }
+
+
 
 $conn->close();
 ?>

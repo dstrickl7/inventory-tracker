@@ -120,6 +120,14 @@ list-edit {
   display: none;
 }
 
+.search-item-container {
+  @include utilities.flex(center, space-between, column);
+  width: 80%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
 @media (min-width: 900px) {
   .scroll-container {
     overflow-y: auto;

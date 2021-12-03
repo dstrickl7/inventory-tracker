@@ -38,10 +38,11 @@
                         <label for="search-item-inv">Search</label>
                         <input type="text" name="search-item-inv" id="search-item-inv" required>
                         <div class="btn-container">
-                            <button type="submit" class="btn-fill-green btn">Search</button>
+                            <button type="submit" class="btn-fill-green btn" id="search-btn">Search</button>
                         </div> 
                     </form>
                 </ul>
+               
             </div>     
         </nav>
         <!-- Navbar end -->
