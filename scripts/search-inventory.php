@@ -32,28 +32,20 @@ $json=json_encode($my_array);
 
 $search_item = strtolower(filter_input(INPUT_GET, "search-item-inv", FILTER_SANITIZE_STRING));
 $data = json_decode($json, true);
+$found=0;
 
-
-$items=[];
-
+echo "<div class='container search-item-container'>";
 foreach ($data as $item) {
-    array_push($items, strtolower($item["item_name"]));
+    if(str_contains(strtolower($item["item_name"]), $search_item)){
+        $found++;
+        echo "<p class='search-results'>Found ".$item["item_name"]. " " . $item["amount"] . $item["unit"]."</p>";  
+    }
 }
+if($found==0){
+    echo "<p>Item not found</p>";
+}
+echo "<a href='../index.php'>Return</a>"; 
+echo "</div>";
 
-if(in_array($search_item, $items, true)){
-    foreach($data as $item){
-        if($search_item==strtolower($item["item_name"])){
-            echo "<div class='container search-item-container'>";
-                echo "<p class='search-results'>Found ".$item["item_name"]. " " . $item["amount"] . $item["unit"]."</p>";
-                echo "<a href='../index.php'>Return</a>";
-            echo "<div>";
-        }
-    }  
-}else{
-    echo "<div class='container search-item-container'>";
-        echo "<p>Item not found</p>";
-        echo "<a href='../index.php'>Return</a>";
-    echo "<div>";
-}
 $conn->close();
 ?>
