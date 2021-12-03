@@ -19,9 +19,9 @@ while($item = $result->fetch_assoc()){
         // Form displays at top of container and does not show the item name of the item it's altering. Changes are also not saved
        echo "<div class='overlay-edit active'></div>";
         echo "<div class='container inventory-edit'>";
-            echo "<svg class='edit-close' xmlns='http://www.w3.org/2000/svg' width='15.556' height='15.556' viewBox='0 0 15.556 15.556'>";
+            echo "<button type='button' aria-label='close' class='close-btn'><svg class='edit-close' xmlns='http://www.w3.org/2000/svg' width='15.556' height='15.556' viewBox='0 0 15.556 15.556'>";
                 echo "<path fill='#000000' d='M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z' transform='translate(-0.222 -0.222)' fill-rule='evenodd'/>";
-            echo "</svg>";
+            echo "</svg></button>";
             echo '<form action="scripts/update-inventory.php" method="POST" class="update-form-container">'; 
                 echo "<div class='inv-items-cont'>";
                     echo "<div class='inv-item-cont'>";   
@@ -105,4 +105,5 @@ if(count($categories)==0){
     echo "<p>You should probably go shopping</p>";
 }
 
+$conn->close();
 ?>

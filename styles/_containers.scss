@@ -6,6 +6,14 @@
   padding: 1rem;
 }
 
+.search-container {
+  display: none;
+}
+
+.search-container.active {
+  @include utilities.flex(center, center, column);
+}
+
 .main-container {
   @include utilities.flex(center, space-between, column);
   width: 80%;

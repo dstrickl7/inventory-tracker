@@ -10,6 +10,13 @@
   margin: 1rem 0.5rem;
 }
 
+.search-btn {
+  background-color: transparent;
+  border: none;
+  font-family: utilities.$quicksand;
+  font-size: 0.95rem;
+}
+
 .delete-btn {
   background-color: transparent;
   border: none;
@@ -28,6 +35,13 @@
   img {
     transform: scale(0.6);
   }
+}
+
+.close-btn {
+  background-color: transparent;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
 }
 
 .btn-nofill-green {

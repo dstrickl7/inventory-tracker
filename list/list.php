@@ -63,10 +63,11 @@
 
             <!-- Add list items container -->
             <div class="container add-container list-add">
-                <svg class="list-add-container-close" xmlns="http://www.w3.org/2000/svg" width="15.556" height="15.556" viewBox="0 0 15.556 15.556">
-                    <path fill="#000000" id="list-icon-close" d="M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z" transform="translate(-0.222 -0.222)" fill-rule="evenodd"/>
-                </svg>
-
+                <button type='button' aria-label='close' class='close-btn'>
+                    <svg class="list-add-container-close" xmlns="http://www.w3.org/2000/svg" width="15.556" height="15.556" viewBox="0 0 15.556 15.556">
+                        <path fill="#000000" id="list-icon-close" d="M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z" transform="translate(-0.222 -0.222)" fill-rule="evenodd"/>
+                    </svg>
+                </button>
                 <!-- Form -->
                 <form action="../scripts/create-list.php" method="post" class="form-container">
                     <!-- Input container -->

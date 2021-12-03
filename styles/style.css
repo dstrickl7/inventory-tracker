@@ -105,6 +105,17 @@
   padding: 1rem;
 }
 
+.search-container {
+  display: none;
+}
+
+.search-container.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -334,6 +345,13 @@ td svg {
   margin: 1rem 0.5rem;
 }
 
+.search-btn {
+  background-color: transparent;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.95rem;
+}
+
 .delete-btn {
   background-color: transparent;
   border: none;
@@ -352,6 +370,13 @@ td svg {
 }
 .update-btn img {
   transform: scale(0.6);
+}
+
+.close-btn {
+  background-color: transparent;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
 }
 
 .btn-nofill-green {
@@ -435,7 +460,8 @@ body {
 
 .add-container-close,
 .list-add-container-close,
-.edit-close {
+.edit-close,
+.close-btn {
   position: absolute;
   top: 5%;
   right: 5%;
@@ -443,7 +469,8 @@ body {
 }
 .add-container-close path,
 .list-add-container-close path,
-.edit-close path {
+.edit-close path,
+.close-btn path {
   fill: #57ad45;
 }
 

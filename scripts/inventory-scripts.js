@@ -2,6 +2,8 @@
 const hamburger = document.querySelector(".hamburger");
 const close = document.querySelector(".close");
 const navlist = document.querySelector(".navlist-container");
+const search = document.querySelector("#search");
+const searchCont = document.querySelector(".search-container");
 
 // Add Inventory item container variables
 const addInventory = document.querySelector("#add-inventory");
@@ -31,6 +33,11 @@ close.addEventListener("click", () => {
   navlist.classList.toggle("active");
   overlay.classList.toggle("active");
   close.classList.toggle("active");
+});
+
+// Display search bar
+search.addEventListener("click", () => {
+  searchCont.classList.toggle("active");
 });
 
 // Display add items container
