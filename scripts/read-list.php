@@ -34,13 +34,12 @@ while($item = $result->fetch_assoc()){
                     echo "<input type='number' name='list-cost' step='.01' min='.01' max='1000' value='" . $item["cost"] . "'>";
                 echo "</td>";
                 echo "<td>";
-        
-            /*Save button */
-                echo '<button type="submit" class="btn-fill-green btn">Save</button>';
-                echo "<svg class='list-edit-close' xmlns='http://www.w3.org/2000/svg' width='15.556' height='15.556' viewBox='0 0 15.556 15.556'>";
-                echo "<path fill='#000000' d='M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z' transform='translate(-0.222 -0.222)' fill-rule='evenodd'/>";
-                echo "</svg>";
-                echo '<input type="hidden" name="id" value="'.$item['id'].'">';
+                /*Save button */
+                    echo '<button type="submit" class="btn-fill-green btn">Save</button>';
+                    echo "<svg class='list-edit-close' xmlns='http://www.w3.org/2000/svg' width='15.556' height='15.556' viewBox='0 0 15.556 15.556'>";
+                    echo "<path fill='#000000' d='M14.364.222l1.414,1.414L9.414,8l6.364,6.364-1.414,1.414L8,9.414,1.636,15.778.222,14.364,6.586,8,.222,1.636,1.636.222,8,6.586Z' transform='translate(-0.222 -0.222)' fill-rule='evenodd'/>";
+                    echo "</svg>";
+                    echo '<input type="hidden" name="id" value="'.$item['id'].'">';
                 echo "</td>";  
             echo '</form>';
     }else{

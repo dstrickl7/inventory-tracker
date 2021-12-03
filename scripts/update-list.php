@@ -1,16 +1,10 @@
 <?php
 include 'config.php';
-$id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
-$item = filter_input(INPUT_POST,"list-item", FILTER_SANITIZE_STRING);
-$amount = filter_input(INPUT_POST, "list-amount", FILTER_SANITIZE_NUMBER_INT);
-$cost = filter_input(INPUT_POST, "list-cost", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 
-/*
-$id = $_POST["id"];
-$item = $_POST["list-item"];
-$amount = $_POST["list-amount"];
-$cost = $_POST["list-cost"];
-*/
+$id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
+$list_item = filter_input(INPUT_POST,"list-item", FILTER_SANITIZE_STRING);
+$list_amount = filter_input(INPUT_POST, "list-amount", FILTER_SANITIZE_NUMBER_INT);
+$list_cost = filter_input(INPUT_POST, "list-cost", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 
 $my_array = Array(
     "name"=>$list_item,
@@ -30,4 +24,6 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 header("location: ../list/list.php");
+
 ?>
+
