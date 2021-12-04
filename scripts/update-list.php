@@ -20,9 +20,11 @@ $stmt->bind_param("sidsi", $list_item, $list_amount, $list_cost,  $json_array, $
 $stmt->execute();
 
 
+
 // Close connection
 $stmt->close();
 $conn->close();
+exec('php list-json.php');
 header("location: ../list/list.php");
 
 ?>

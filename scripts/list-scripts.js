@@ -18,6 +18,7 @@ const total = document.querySelector("#total");
 const tax = document.querySelector("#tax");
 let itemCosts = document.querySelectorAll(".item-cost");
 let itemAmounts = document.querySelectorAll(".item-amounts");
+let itemInfo;
 
 // Open mobile nav
 hamburger.addEventListener("click", () => {
@@ -76,39 +77,40 @@ function addSection(parent, section) {
 }
 
 // Calculate estimated cost
-costArray = [];
-amountArray = [];
-itemCosts.forEach((item) => {
-  costArray.push(Number(item.textContent));
-});
+let costArray = [];
+// Get JSON
+const getJsonData = () => {
+  fetch("../scripts/list-data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach((item) => {
+        costArray.push(item.cost * item.amount);
 
-itemAmounts.forEach((item) => {
-  amountArray.push(Number(item.textContent));
-});
+        let subtotal = costArray.reduce(sum);
+
+        const calculateTax = (tax) => {
+          const newTax = Number(tax.value) / 100;
+          return newTax;
+        };
+
+        const displayTotal = (tax) => {
+          total.innerText = (subtotal * (1 + calculateTax(tax))).toFixed(2);
+        };
+
+        displayTotal(tax);
+
+        tax.addEventListener("change", () => {
+          calculateTax(tax);
+        });
+        tax.addEventListener("change", () => {
+          displayTotal(tax);
+        });
+      });
+    });
+};
+
+document.addEventListener("change", getJsonData());
 
 function sum(x, y) {
   return x + y;
 }
-let subtotal = costArray.reduce(sum);
-// console.log(subtotal);
-
-const calculateTax = (tax) => {
-  const newTax = Number(tax.value) / 100;
-  return newTax;
-};
-
-console.log(calculateTax(tax));
-
-const displayTotal = (tax) => {
-  total.innerText = (subtotal * (1 + calculateTax(tax))).toFixed(2);
-};
-
-displayTotal(tax);
-
-tax.addEventListener("change", () => {
-  calculateTax(tax);
-});
-tax.addEventListener("change", () => {
-  displayTotal(tax);
-});
-// displayTotal(tax);

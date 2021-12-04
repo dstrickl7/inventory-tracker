@@ -62,6 +62,7 @@ This project came about because I wanted a way to keep track of the grocery item
 - CRUD with PHP and MySQL
 - Creating and manipulating MySQL tables
 - Inserting JSON data into MySQL tables
+- Testing GET and POST requests with Postman
 
 
 ```js
@@ -84,6 +85,7 @@ This project came about because I wanted a way to keep track of the grocery item
 ### Useful resources
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) - My go-to resource for syntax and use examples
+- [Traversy Media-Fetch API introduction](https://www.youtube.com/watch?v=Oive66jrwBs) - I used this resource to access my JSON file from within my JS
 
 ## Author
 
