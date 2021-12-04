@@ -51,7 +51,7 @@
                         <?php include "../scripts/read-list.php" ;?>
                     </table>
                     <label for='tax'>Tax rate:</label>
-                    <input type='number' name='tax' step='.25' min='0' max='20' id="tax">
+                    <input type='number' name='tax' step='.25' min='0' max='20' value='0' id="tax">
                     <p>Est. Total: <p id='total'></p></p>
                 </div>
             
