@@ -35,10 +35,11 @@ $data = json_decode($json, true);
 $found=0;
 
 echo "<div class='container search-item-container'>";
+echo "<h2 class='.col-title'>Search Results</h2>";
 foreach ($data as $item) {
     if(str_contains(strtolower($item["item_name"]), $search_item)){
         $found++;
-        echo "<p class='search-results'>Found ".$item["item_name"]. " " . $item["amount"] . $item["unit"]."</p>";  
+        echo "<p class='search-results'>".$item["item_name"]. " " . $item["amount"] . $item["unit"]."</p>";  
     }
 }
 if($found==0){

@@ -33,7 +33,6 @@
                 <ul class="navlist">
                     <li class="navitem"><a href="../index.php" class="navlink">Inventory</a></li>
                     <li class="navitem"><a href="list.php" class="navlink" aria-current="page">Shopping List</a></li>
-                    <li class="navitem"><a href="" class="navlink">Search</a></li>
                 </ul>
             </div>     
         </nav>
@@ -51,6 +50,9 @@
                     <table>
                         <?php include "../scripts/read-list.php" ;?>
                     </table>
+                    <label for='tax'>Tax rate:</label>
+                    <input type='number' name='tax' step='.25' min='0' max='20' id="tax">
+                    <p>Est. Total: <p id='total'></p></p>
                 </div>
             
                 <!-- Button to add items -->
@@ -100,17 +102,6 @@
                     </div>
             <!-- End List Container -->
         </section>
-
-
-
-
-
-
-
-
-
-
-    
     </main>
     <script src="../scripts/list-scripts.js"></script>
    

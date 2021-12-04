@@ -266,7 +266,7 @@ list-edit {
   align-items: center;
   width: 80%;
   position: absolute;
-  top: 40%;
+  top: 10%;
   left: 10%;
 }
 
@@ -435,6 +435,10 @@ label {
 .col-title {
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+.search-results {
+  margin: 0.5rem;
 }
 
 * {

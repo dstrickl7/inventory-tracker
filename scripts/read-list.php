@@ -45,8 +45,8 @@ while($item = $result->fetch_assoc()){
     }else{
             echo "<tr>";
                 echo "<td>" . $item["item_name"] . "</td>";
-                echo "<td>" . $item["amount"] . "</td>";
-                echo "<td>" . $item["cost"] . "</td>";
+                echo "<td class='item-amounts'>" . $item["amount"] . "</td>";
+                echo "<td class='item-cost'>" . $item["cost"] . "</td>";
                 echo "<td>";
                     echo "<div class='list-btn-container'>";
                     // Update button
@@ -57,7 +57,9 @@ while($item = $result->fetch_assoc()){
                     echo "</td>";
             echo "</tr>";  
     }    
-        
+
 }
+
+
 $conn->close();
 ?>

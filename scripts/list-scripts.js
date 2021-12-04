@@ -13,6 +13,12 @@ const liItemCont = document.querySelector(".li-item-cont");
 const listAddContClose = document.querySelector(".list-add-container-close");
 let itemCount = 1;
 
+// Total cost variables
+const total = document.querySelector("#total");
+const tax = document.querySelector("#tax");
+let itemCosts = document.querySelectorAll(".item-cost");
+let itemAmounts = document.querySelectorAll(".item-amounts");
+
 // Open mobile nav
 hamburger.addEventListener("click", () => {
   navlist.classList.toggle("active");
@@ -68,3 +74,23 @@ function addSection(parent, section) {
     });
   }
 }
+
+// Calculate estimated cost
+costArray = [];
+amountArray = [];
+itemCosts.forEach((item) => {
+  costArray.push(Number(item.textContent));
+});
+
+itemAmounts.forEach((item) => {
+  amountArray.push(Number(item.textContent));
+});
+
+subtotalArray = costArray * amountArray;
+console.log(subtotalArray);
+
+function sum(x, y) {
+  return x + y;
+}
+let subtotal = costArray.reduce(sum);
+// console.log(subtotal);
