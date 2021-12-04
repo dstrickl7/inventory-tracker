@@ -6,7 +6,7 @@
 
 .list {
   @include utilities.flex(center, center, column);
-  padding-top: 1.5rem;
+  padding-top: 10%;
 }
 
 table {
@@ -61,3 +61,9 @@ td {
 // th
 // tr
 // td
+
+@media (min-width: 768px) {
+  .list {
+    padding-top: 5%;
+  }
+}

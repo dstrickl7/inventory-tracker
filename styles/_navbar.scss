@@ -1,7 +1,11 @@
 @use "./utilities";
 
 .navbar {
-  background: linear-gradient(utilities.$lgreen, utilities.$green);
+  background: linear-gradient(
+    utilities.$lgreen,
+    utilities.$green,
+    utilities.$lgreen
+  );
   width: 100%;
   @include utilities.flex(space-between, center);
 }

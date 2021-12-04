@@ -38,7 +38,7 @@
                         <label for="search-item-inv">Search</label>
                         <input type="text" name="search-item-inv" id="search-item-inv" required>
                         <div class="btn-container">
-                            <button type="submit" class="btn-fill-green btn" id="search-btn">Search</button>
+                            <button type="submit" class="btn-fill btn" id="search-btn">Search</button>
                         </div> 
                     </form>
                 </ul>
@@ -64,7 +64,7 @@
                 
                 <!-- Button to add items -->
                 <div class="btn-container">
-                    <button class="add-btn btn-fill-green btn" id="add-inventory">Add Items</button>
+                    <button class="add-btn btn-fill btn" id="add-inventory">Add Items</button>
                 </div>
                 
             </div>
@@ -118,8 +118,8 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn-nofill-green btn" id="add-item-inv" type="button">More items</button>
-                        <button type="submit" class="btn-fill-green btn">Save</button>
+                        <button class="btn-nofill btn" id="add-item-inv" type="button">More items</button>
+                        <button type="submit" class="btn-fill btn">Save</button>
                     </div>   
                 </form>
                 <!-- Form ends -->

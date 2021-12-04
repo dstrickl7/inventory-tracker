@@ -2,9 +2,15 @@
 
 .inventory {
   @include utilities.flex(center, center, column);
-  padding-top: 1.5rem;
+  padding-top: 10%;
 }
 
 .inventory.inactive {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .inventory {
+    padding-top: 5%;
+  }
 }

@@ -128,8 +128,37 @@ list-edit {
   left: 10%;
 }
 
+@media (min-width: 768px) {
+  .inv-item-cont {
+    width: 90%;
+  }
+
+  .inv-items-cont,
+  .li-items-cont {
+    @include utilities.flex(center, center, column);
+  }
+}
+
 @media (min-width: 900px) {
+  .main-container {
+    @include utilities.flex(center, space-between, column);
+    width: 60%;
+    height: 80vh;
+  }
+
   .scroll-container {
     overflow-y: auto;
+  }
+
+  .add-container {
+    width: 50%;
+  }
+
+  .search-item-container {
+    width: 60%;
+  }
+
+  .inputs {
+    margin: 0 0.75rem;
   }
 }

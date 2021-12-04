@@ -15,7 +15,14 @@
 body {
   font-size: 15px;
   font-family: utilities.$quicksand;
-  background-color: utilities.$lgreen;
+  // background-color: utilities.$vlgreen;
+  // color: utilities.$black;
+  @include utilities.theme(
+    utilities.$green,
+    utilities.$lgreen,
+    utilities.$vlgreen,
+    utilities.$black
+  );
 }
 
 .overlay.active {

@@ -30,6 +30,7 @@ The project should accomplish:
 
 Future Additions
 
+- Different color schemes
 - App suggests items that need to be added to shopping list based on current inventory and frequency of use of item
 - App suggests meal ideas using items on hand 
 
