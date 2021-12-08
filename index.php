@@ -41,6 +41,7 @@
                             <button type="submit" class="btn-fill btn" id="search-btn">Search</button>
                         </div> 
                     </form>
+                    <button class="logout btn btn-fill">Logout</button>
                 </ul>
                
             </div>     
@@ -130,6 +131,8 @@
 
     
     </main>
+
+    <script src="dist/bundle.js"></script>
     <script src="scripts/inventory-scripts.js"></script>
    
 </body>

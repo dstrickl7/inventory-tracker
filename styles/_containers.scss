@@ -128,6 +128,16 @@ list-edit {
   left: 10%;
 }
 
+// Login start
+.login-container {
+  @include utilities.flex(center, center, column);
+  width: 80%;
+
+  margin: auto;
+  margin-top: 2.5rem;
+}
+// Login end
+
 @media (min-width: 768px) {
   .inv-item-cont {
     width: 90%;

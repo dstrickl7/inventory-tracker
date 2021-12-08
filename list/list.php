@@ -33,7 +33,9 @@
                 <ul class="navlist">
                     <li class="navitem"><a href="../index.php" class="navlink">Inventory</a></li>
                     <li class="navitem"><a href="list.php" class="navlink" aria-current="page">Shopping List</a></li>
+                    <button class="logout btn btn-fill">Logout</button>
                 </ul>
+                
             </div>     
         </nav>
         <!-- Navbar end -->

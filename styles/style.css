@@ -270,6 +270,16 @@ list-edit {
   left: 10%;
 }
 
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 2.5rem;
+}
+
 @media (min-width: 768px) {
   .inv-item-cont {
     width: 90%;
@@ -470,6 +480,11 @@ label {
   text-transform: capitalize;
 }
 
+.logo-login {
+  font-size: 1.1rem;
+  font-family: "Caveat", cursive;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -530,6 +545,13 @@ body .btn-nofill {
 
 .list-edit-close path {
   fill: #57ad45;
+}
+
+.inputs-login {
+  margin: 1rem;
+}
+.inputs-login input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
