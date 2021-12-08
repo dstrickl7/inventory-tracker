@@ -44,7 +44,10 @@
             <div class="logo-container-login">
                 <h1 class="logo-login"><img src="../styles/icons/shopping-list.svg" alt="The Kitchen Tracker" class="logo-img" aria-hidden="true">The Kitchen Tracker</h1>
             </div>
-            <form class="login">
+            <div class="error-container">
+                <p class="error"></p>
+            </div>
+            <form class="login" method="POST" action= "index.php">
                 <div class="inputs-login">
                     <label for="email">Email:</label>
                         <input type="email" name="email" id="email" required>
@@ -58,7 +61,7 @@
                 </div>
             </form>
 
-            <form class="signup" method="POST">
+            <form class="signup" method="POST" action= "index.php">
             <div class="inputs-login">
                     <label for="Name">Name:</label>
                         <input type="name" name="name" required>
