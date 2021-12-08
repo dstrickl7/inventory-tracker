@@ -42,6 +42,7 @@ if (signupForm) {
         const user = userCredential.user;
         console.log("User created:", user);
         signupForm.reset();
+        window.location.replace("../index.php");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -71,6 +72,7 @@ if (loginForm) {
         // Signed in
         const user = userCredential.user;
         loginForm.reset();
+        window.location.replace("../index.php");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -90,7 +92,7 @@ if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {
     signOut(auth)
       .then(() => {
-        console.log("Signed Out");
+        window.location.replace("login.php");
       })
       .catch((error) => {
         const errorCode = error.code;

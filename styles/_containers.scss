@@ -136,7 +136,21 @@ list-edit {
   margin: auto;
   margin-top: 2.5rem;
 }
+
+.login.hidden {
+  display: none;
+}
 // Login end
+
+// Signup start
+.signup {
+  display: none;
+}
+
+.signup.active {
+  display: block;
+}
+// Signup end
 
 @media (min-width: 768px) {
   .inv-item-cont {

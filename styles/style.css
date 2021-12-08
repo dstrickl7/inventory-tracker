@@ -280,6 +280,18 @@ list-edit {
   margin-top: 2.5rem;
 }
 
+.login.hidden {
+  display: none;
+}
+
+.signup {
+  display: none;
+}
+
+.signup.active {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .inv-item-cont {
     width: 90%;
