@@ -1,13 +1,10 @@
 import { initializeApp } from "@firebase/app";
-
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js";
 import { getAnalytics } from "@firebase/analytics";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "@firebase/auth";
-// import { getAuth,  } from "@firebase/auth";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -40,8 +37,8 @@ signupForm.addEventListener("submit", (e) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      usersName= user.displayName;
-      console.log("User created:", usersName, user);
+      // usersName= user.displayName;
+      console.log("User created:", user);
       signupForm.reset();
     })
     .catch((error) => {
@@ -64,7 +61,7 @@ loginForm.addEventListener("submit", (e) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      console.log("Hello:", user.displayName, "! Welcome back!");
+      // console.log("Hello:", user.displayName, "! Welcome back!");
       signupForm.reset();
     })
     .catch((error) => {

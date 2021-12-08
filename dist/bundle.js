@@ -15,7 +15,7 @@
   \******************/
 /***/ (() => {
 
-throw new Error("Module parse failed: Unexpected token (37:17)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n|   const email = signupForm.email.value;\n|   const password = signupForm.password.value;\n>   const usersName;\n| \n|   createUserWithEmailAndPassword(auth, email, password)");
+throw new Error("Module parse failed: Unexpected token (34:17)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n|   const email = signupForm.email.value;\n|   const password = signupForm.password.value;\n>   const usersName;\n| \n|   createUserWithEmailAndPassword(auth, email, password)");
 
 /***/ })
 
