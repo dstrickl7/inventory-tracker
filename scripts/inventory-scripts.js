@@ -1,14 +1,6 @@
-// Navbar variables
-const hamburger = document.querySelector(".hamburger");
-const close = document.querySelector(".close");
-const navlist = document.querySelector(".navlist-container");
-const search = document.querySelector("#search");
-const searchCont = document.querySelector(".search-container");
-
 // Add Inventory item container variables
 const addInventory = document.querySelector("#add-inventory");
 const addContainer = document.querySelector(".inventory-add");
-const overlay = document.querySelector(".overlay");
 const addContClose = document.querySelector(".add-container-close");
 const addInventoryItem = document.querySelector("#add-item-inv");
 const invItemsCont = document.querySelector(".inv-items-cont");
@@ -21,19 +13,6 @@ const editBtn = document.querySelectorAll(".update-btn");
 const editContainer = document.querySelector(".inventory-edit");
 const editClose = document.querySelector(".edit-close");
 const editOverlay = document.querySelector(".overlay-edit");
-
-// Open mobile nav
-hamburger.addEventListener("click", () => {
-  navlist.classList.toggle("active");
-  overlay.classList.toggle("active");
-  close.classList.toggle("active");
-});
-
-close.addEventListener("click", () => {
-  navlist.classList.toggle("active");
-  overlay.classList.toggle("active");
-  close.classList.toggle("active");
-});
 
 // Display search bar
 search.addEventListener("click", () => {

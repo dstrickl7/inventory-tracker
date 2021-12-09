@@ -1,9 +1,3 @@
-// Navbar variables
-const hamburger = document.querySelector(".hamburger");
-const close = document.querySelector(".close");
-const navlist = document.querySelector(".navlist-container");
-const overlay = document.querySelector(".overlay");
-
 // Add List item container variables
 const addList = document.querySelector("#add-list");
 const addListItem = document.querySelector("#add-item-list");
@@ -21,27 +15,6 @@ const tax = document.querySelector("#tax");
 let itemCosts = document.querySelectorAll(".item-cost");
 let itemAmounts = document.querySelectorAll(".item-amounts");
 let itemInfo;
-
-// Open mobile nav
-hamburger.addEventListener("click", () => {
-  navlist.classList.toggle("active");
-  overlay.classList.toggle("active");
-  close.classList.toggle("active");
-});
-
-close.addEventListener("click", () => {
-  navlist.classList.toggle("active");
-  overlay.classList.toggle("active");
-  close.classList.toggle("active");
-});
-
-/*
-
-const overlay = document.querySelector(".overlay");
-const addContClose = document.querySelector(".add-container-close");
-const removeItemBtn = document.querySelector(".add-item-delete");
-
-*/
 
 // Display add items container
 addList.addEventListener("click", () => {

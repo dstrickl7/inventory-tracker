@@ -24,7 +24,11 @@
   overflow-y: scroll;
   width: 100%;
   min-height: 50%;
-  @include utilities.flex(center, space-between, column);
+  @include utilities.flex(center, normal, column);
+}
+
+.inventory-scroll {
+  min-height: 70%;
 }
 
 .add-container {
@@ -111,7 +115,7 @@ list-edit {
   @include utilities.flex(center, space-between);
   position: absolute;
   width: 80%;
-  top: 40%;
+  top: 20%;
   z-index: 10;
   border: inset 0.1rem transparent;
 }
@@ -186,6 +190,12 @@ list-edit {
 
   .add-container {
     width: 50%;
+  }
+
+  .inventory-edit,
+  list-edit {
+    width: 50%;
+    // top: 20%;
   }
 
   .search-item-container {

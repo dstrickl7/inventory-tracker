@@ -70,7 +70,7 @@ if(!isset($_SESSION['user_id'])){
                     </div>
                 <!-- Button to add items -->
                 <div class="btn-container">
-                    <button class="add-btn btn-fill btn" id="add-list" type="button">Add Items</button>
+                    <button class="add-btn btn-fill btn btn-lg" id="add-list" type="button">Add Items</button>
                 </div>
                 
             </div>
@@ -115,6 +115,7 @@ if(!isset($_SESSION['user_id'])){
         </section>
     </main>
     <script src="../dist/bundle.js"></script>
+    <script src="../scripts/script.js"></script>
     <script src="../scripts/list-scripts.js"></script>
    
 </body>

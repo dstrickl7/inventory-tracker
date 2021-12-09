@@ -61,7 +61,7 @@ while($item = $result->fetch_assoc()){
                 echo "</div>";
             /*Save button */
             echo "<div class='btn-container'>";
-                echo '<button type="submit" class="btn-fill btn">Save</button>';
+                echo '<button type="submit" class="btn-fill btn btn-md">Save</button>';
             echo "</div>";
                 echo '<input type="hidden" name="id" value="'.$item['id'].'">';
             

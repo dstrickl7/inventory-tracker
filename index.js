@@ -42,7 +42,7 @@ if (signupForm) {
         const user = userCredential.user;
         console.log("User created:", user);
         signupForm.reset();
-        window.location.replace("../index.php");
+        window.location.replace("loggedin.php");
       })
       .catch((error) => {
         const errorCode = error.code;

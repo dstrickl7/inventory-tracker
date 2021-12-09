@@ -131,8 +131,12 @@
   min-height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: normal;
   align-items: center;
+}
+
+.inventory-scroll {
+  min-height: 70%;
 }
 
 .add-container {
@@ -250,7 +254,7 @@ list-edit {
   align-items: center;
   position: absolute;
   width: 80%;
-  top: 40%;
+  top: 20%;
   z-index: 10;
   border: inset 0.1rem transparent;
 }
@@ -332,6 +336,11 @@ list-edit {
   }
 
   .add-container {
+    width: 50%;
+  }
+
+  .inventory-edit,
+list-edit {
     width: 50%;
   }
 

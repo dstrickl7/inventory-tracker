@@ -66,7 +66,7 @@ if(!isset($_SESSION['user_id'])){
             <div class="container main-container">
                 <h1 class="title main-title">Inventory</h1>
             <!-- Display inventory items -->
-                <div class="scroll-container">
+                <div class="scroll-container inventory-scroll">
                     <?php include "scripts/read-inventory.php" ;?>
                 </div>
                 
@@ -138,6 +138,7 @@ if(!isset($_SESSION['user_id'])){
     </main>
 
     <script src="dist/bundle.js"></script>
+    <script src="scripts/script.js"></script>
     <script src="scripts/inventory-scripts.js"></script>
    
 </body>
