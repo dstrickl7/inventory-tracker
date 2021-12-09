@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +56,7 @@
                     <button type="submit" class="btn btn-fill btn-md">Log In</button>
                     <button class="btn btn-md" type=button id="signupBtn">SignUp</button>
                 </div>
+                <button type="button" role="link" class="guest-login">Login as guest</button>
             </form>
 
             <form class="signup" method="POST">
@@ -71,9 +76,7 @@
                     <button type="submit" class="btn btn-fill btn-md">Sign Up</button>
                     <button class="btn btn-md" id="backBtn">Back to Login</button>
                 </div>
-            </form>
-
-
+            </form>          
 
         </div>
     </main>

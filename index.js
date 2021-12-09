@@ -72,7 +72,7 @@ if (loginForm) {
         // Signed in
         const user = userCredential.user;
         loginForm.reset();
-        window.location.replace("../index.php");
+        window.location.replace("loggedin.php");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -92,7 +92,7 @@ if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {
     signOut(auth)
       .then(() => {
-        window.location.replace("login.php");
+        window.location.replace("../logout.php");
       })
       .catch((error) => {
         const errorCode = error.code;

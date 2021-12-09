@@ -449,6 +449,16 @@ td svg {
   min-width: 50%;
 }
 
+.guest-login {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  text-decoration: underline;
+  text-align: center;
+  color: blue;
+  cursor: pointer;
+}
+
 .search-btn {
   background-color: transparent;
   border: none;
