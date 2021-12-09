@@ -6,8 +6,19 @@
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-weight: 600;
-  min-width: 40%;
   margin: 1rem 0.5rem;
+}
+
+.btn-sm {
+  min-width: 30%;
+}
+
+.btn-md {
+  min-width: 40%;
+}
+
+.btn-lg {
+  min-width: 50%;
 }
 
 .search-btn {

@@ -65,7 +65,7 @@
                 
                 <!-- Button to add items -->
                 <div class="btn-container">
-                    <button class="add-btn btn-fill btn" id="add-inventory">Add Items</button>
+                    <button class="add-btn btn-fill btn btn-lg" id="add-inventory">Add Items</button>
                 </div>
                 
             </div>
@@ -112,15 +112,13 @@
                                     <option value="cntr">cntr</option>
                                 </select>
                             </div>
-                            <button class="add-item-delete delete-btn" id="removeItem" type="button">
-                                <img src="styles/icons/trashcan.svg" alt="Delete">
-                            </button>
                         </div>
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn-nofill btn" id="add-item-inv" type="button">More items</button>
-                        <button type="submit" class="btn-fill btn">Save</button>
+                        <button class="btn-nofill btn btn-sm" id="add-item-inv" type="button">More items</button>
+                        <button class="btn-nofill btn btn-sm remove-btn" id="remove-item-inv" type="button">Less items</button>
+                        <button type="submit" class="btn-fill btn btn-sm">Save</button>
                     </div>   
                 </form>
                 <!-- Form ends -->

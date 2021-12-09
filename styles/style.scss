@@ -25,6 +25,10 @@ body {
   );
 }
 
+.hidden {
+  display: none;
+}
+
 .overlay.active {
   background-color: utilities.$black;
   opacity: 70%;

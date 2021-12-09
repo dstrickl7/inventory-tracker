@@ -23,6 +23,7 @@
 .scroll-container {
   overflow-y: scroll;
   width: 100%;
+  min-height: 50%;
   @include utilities.flex(center, space-between, column);
 }
 
@@ -128,11 +129,14 @@ list-edit {
   left: 10%;
 }
 
+.total-container {
+  @include utilities.flex(center, center, column);
+}
+
 // Login start
 .login-container {
   @include utilities.flex(center, center, column);
   width: 80%;
-
   margin: auto;
   margin-top: 2.5rem;
 }
@@ -161,6 +165,12 @@ list-edit {
   .li-items-cont {
     @include utilities.flex(center, center, column);
   }
+
+  // Login start
+  .login-container {
+    width: 60%;
+  }
+  // Login end
 }
 
 @media (min-width: 900px) {
@@ -185,4 +195,10 @@ list-edit {
   .inputs {
     margin: 0 0.75rem;
   }
+
+  // Login start
+  .login-container {
+    width: 45%;
+  }
+  // Login end
 }

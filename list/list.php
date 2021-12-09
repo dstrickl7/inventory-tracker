@@ -52,11 +52,15 @@
                     <table>
                         <?php include "../scripts/read-list.php" ;?>
                     </table>
-                    <label for='tax'>Tax rate:</label>
-                    <input type='number' name='tax' step='.25' min='0' max='20' value='0' id="tax">
-                    <p>Est. Total: <p id='total'></p></p>
+                   
+                    
                 </div>
-            
+                <!-- List total container -->
+                <div class="total-container">
+                        <label for='tax'>Tax rate:</label>
+                        <input type='number' name='tax' step='.25' min='0' max='20' value='0' id="tax">
+                        <p>Est. Total: <p id='total'></p></p>
+                    </div>
                 <!-- Button to add items -->
                 <div class="btn-container">
                     <button class="add-btn btn-fill btn" id="add-list" type="button">Add Items</button>
@@ -89,14 +93,12 @@
                                 <label for="cost">Est. Cost</label>
                                 <input type="number" name="list-cost[]" id="list-cost" step=".01" min="0" max="1000">
                             </div>
-                            <button class="delete-btn add-item-delete" id="removeItem" type="button">
-                                <img src="../styles/icons/trashcan.svg" alt="Delete">
-                            </button>
                         </div>
                     </div>
 
                     <div class="btn-container">
                         <button class="btn-nofill btn" id="add-item-list" type="button">More items</button>
+                        <button class="btn-nofill btn remove-btn" id="remove-item-list" type="button">Less items</button>
                         <button type="submit" class="btn-fill btn">Save</button>
                     </div>   
                 </form>

@@ -22,7 +22,7 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar">
-            <div class="logo-container">
+            <div class="logo-container-login">
                 <a href="#" aria-label="homepage" class="logo-text"><img src="/styles/icons/shopping-list.svg"
                         alt="The Kitchen Tracker" class="logo-img" aria-hidden="true">The Kitchen Tracker</a>
             </div>
@@ -49,8 +49,8 @@
                     <input type="password" name="password" id="password" required>
                 </div>
                 <div class="btn-container">
-                    <button type="submit" class="btn btn-fill">Log In</button>
-                    <button class="btn" type=button id="signupBtn">SignUp</button>
+                    <button type="submit" class="btn btn-fill btn-md">Log In</button>
+                    <button class="btn btn-md" type=button id="signupBtn">SignUp</button>
                 </div>
             </form>
 
@@ -68,8 +68,8 @@
                     <input type="password" name="password" required>
                 </div>
                 <div class="btn-container">
-                    <button type="submit" class="btn btn-fill">Sign Up</button>
-                    <button class="btn" id="backBtn">Back to Login</button>
+                    <button type="submit" class="btn btn-fill btn-md">Sign Up</button>
+                    <button class="btn btn-md" id="backBtn">Back to Login</button>
                 </div>
             </form>
 

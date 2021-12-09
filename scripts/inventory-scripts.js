@@ -13,7 +13,7 @@ const addContClose = document.querySelector(".add-container-close");
 const addInventoryItem = document.querySelector("#add-item-inv");
 const invItemsCont = document.querySelector(".inv-items-cont");
 const invItemCont = document.querySelector(".inv-item-cont");
-const removeItemBtn = document.querySelectorAll(".add-item-delete");
+const removeInvItemBtn = document.querySelector("#remove-item-inv");
 let itemCount = 1;
 
 // Edit inventory item variables
@@ -55,6 +55,7 @@ addContClose.addEventListener("click", () => {
 addInventoryItem.addEventListener("click", () => {
   addSection(invItemsCont, invItemCont);
   itemCount++;
+  removeInvItemBtn.classList.remove("hidden");
 });
 
 function addSection(parent, section) {
@@ -75,7 +76,24 @@ function addSection(parent, section) {
   }
 }
 
+if (itemCount <= 1) {
+  removeInvItemBtn.classList.add("hidden");
+}
+
 // Delete row from add item container
+function removeSection(parent) {
+  if (itemCount > 1) {
+    parent.lastChild.remove();
+  }
+}
+
+removeInvItemBtn.addEventListener("click", () => {
+  removeSection(invItemsCont);
+  itemCount--;
+  if (itemCount <= 1) {
+    removeInvItemBtn.classList.add("hidden");
+  }
+});
 
 // close edit item container
 
