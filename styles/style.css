@@ -1,5 +1,4 @@
 .navbar {
-  background: linear-gradient(#a3e296, #57ad45, #a3e296);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -641,6 +640,26 @@ body .btn-nofill {
   border: solid #57ad45 0.2rem;
   color: #57ad45;
 }
+body .navbar {
+  background: linear-gradient(#a3e296, #57ad45, #a3e296);
+}
+
+body.green {
+  background-color: #dfebdc;
+  color: #000000;
+}
+body.green .btn-fill {
+  background-color: #57ad45;
+  color: white;
+}
+body.green .btn-nofill {
+  background-color: transparent;
+  border: solid #57ad45 0.2rem;
+  color: #57ad45;
+}
+body.green .navbar {
+  background: linear-gradient(#a3e296, #57ad45, #a3e296);
+}
 
 body.blue {
   font-size: 15px;
@@ -656,6 +675,9 @@ body.blue .btn-nofill {
   background-color: transparent;
   border: solid #6a8bad 0.2rem;
   color: #6a8bad;
+}
+body.blue .navbar {
+  background: linear-gradient(#8cc2fa, #6a8bad, #8cc2fa);
 }
 
 body.salmon {
@@ -673,6 +695,9 @@ body.salmon .btn-nofill {
   border: solid #ad6661 0.2rem;
   color: #ad6661;
 }
+body.salmon .navbar {
+  background: linear-gradient(#faaaa4, #ad6661, #faaaa4);
+}
 
 body.grey {
   font-size: 15px;
@@ -688,6 +713,9 @@ body.grey .btn-nofill {
   background-color: transparent;
   border: solid #62656b 0.2rem;
   color: #62656b;
+}
+body.grey .navbar {
+  background: linear-gradient(#4d4f53, #62656b, #4d4f53);
 }
 
 .hidden {
@@ -754,7 +782,7 @@ body.grey .btn-nofill {
 }
 
 .grey {
-  background-color: #62656b;
+  background-color: #4d4f53;
 }
 
 .search {

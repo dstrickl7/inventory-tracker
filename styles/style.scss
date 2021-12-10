@@ -26,6 +26,15 @@ body {
   );
 }
 
+body.green {
+  @include utilities.theme(
+    utilities.$green,
+    utilities.$lgreen,
+    utilities.$vlgreen,
+    utilities.$black
+  );
+}
+
 body.blue {
   font-size: 15px;
   font-family: utilities.$quicksand;
@@ -52,7 +61,7 @@ body.grey {
   font-size: 15px;
   font-family: utilities.$quicksand;
   @include utilities.theme(
-    utilities.$dgrey,
+    utilities.$grey,
     utilities.$dgrey,
     utilities.$lgrey,
     utilities.$black

@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../styles/style.css">
 
 </head>
-<body>
+<body id="body">
     <header>
         <!-- Navbar -->
         <nav class="navbar">

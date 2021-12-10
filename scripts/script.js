@@ -12,6 +12,7 @@ const searchCont = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
 
 // Change color scheme
+const body = document.querySelector("#body");
 const blue = document.querySelector("#blue");
 const green = document.querySelector("#green");
 const salmon = document.querySelector("#salmon");
@@ -52,3 +53,24 @@ if (backBtn) {
     signup.classList.toggle("active");
   });
 }
+
+// Change body color
+blue.addEventListener("click", () => {
+  body.classList.add("blue");
+  body.classList.remove("green", "salmon", "grey");
+});
+
+green.addEventListener("click", () => {
+  body.classList.add("green");
+  body.classList.remove("blue", "salmon", "grey");
+});
+
+salmon.addEventListener("click", () => {
+  body.classList.add("salmon");
+  body.classList.remove("blue", "green", "grey");
+});
+
+grey.addEventListener("click", () => {
+  body.classList.add("grey");
+  body.classList.remove("blue", "salmon", "green");
+});

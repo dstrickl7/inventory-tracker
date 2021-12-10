@@ -25,4 +25,7 @@
   .btn-nofill {
     @include nofill($baseColor);
   }
+  .navbar {
+    background: linear-gradient($shade, $baseColor, $shade);
+  }
 }
