@@ -55,10 +55,6 @@ if(!isset($_SESSION['user_id'])){
         </nav>
         <!-- Navbar end -->
         <div class="overlay"></div>
-
-
-
-
     </header>
     <main>
         <section class="inventory" id="inventory"> 

@@ -246,8 +246,7 @@
 }
 
 .inventory-edit,
-list-edit {
-  width: 90%;
+.list-edit {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -270,9 +269,6 @@ list-edit {
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  position: absolute;
-  top: 10%;
-  left: 10%;
 }
 
 .total-container {
@@ -304,6 +300,16 @@ list-edit {
   display: block;
 }
 
+@media (max-width: 370px) {
+  .add-container {
+    width: 90%;
+  }
+
+  .inventory-edit,
+.list-edit {
+    width: 90%;
+  }
+}
 @media (min-width: 768px) {
   .inv-item-cont {
     width: 90%;
@@ -614,6 +620,14 @@ body .btn-nofill {
 }
 .inputs-login input {
   width: 100%;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */

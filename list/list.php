@@ -104,9 +104,9 @@ if(!isset($_SESSION['user_id'])){
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn-nofill btn" id="add-item-list" type="button">More items</button>
-                        <button class="btn-nofill btn remove-btn" id="remove-item-list" type="button">Less items</button>
-                        <button type="submit" class="btn-fill btn">Save</button>
+                        <button class="btn-nofill btn btn-sm" id="add-item-list" type="button">More items</button>
+                        <button class="btn-nofill btn remove-btn btn-sm" id="remove-item-list" type="button">Less items</button>
+                        <button type="submit" class="btn-fill btn btn-sm">Save</button>
                     </div>   
                 </form>
                     <!-- Form ends -->

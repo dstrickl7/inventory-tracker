@@ -13,12 +13,12 @@ const editBtn = document.querySelectorAll(".update-btn");
 const editContainer = document.querySelector(".inventory-edit");
 const editClose = document.querySelector(".edit-close");
 const editOverlay = document.querySelector(".overlay-edit");
-
+/*
 // Display search bar
 search.addEventListener("click", () => {
   searchCont.classList.toggle("active");
 });
-
+*/
 // Display add items container
 addInventory.addEventListener("click", () => {
   addContainer.classList.toggle("active");

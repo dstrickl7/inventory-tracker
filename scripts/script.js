@@ -12,17 +12,19 @@ const searchCont = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
 
 // Open mobile nav
-hamburger.addEventListener("click", () => {
-  navlist.classList.toggle("active");
-  overlay.classList.toggle("active");
-  close.classList.toggle("active");
-});
+if (navlist) {
+  hamburger.addEventListener("click", () => {
+    navlist.classList.toggle("active");
+    overlay.classList.toggle("active");
+    close.classList.toggle("active");
+  });
 
-close.addEventListener("click", () => {
-  navlist.classList.toggle("active");
-  overlay.classList.toggle("active");
-  close.classList.toggle("active");
-});
+  close.addEventListener("click", () => {
+    navlist.classList.toggle("active");
+    overlay.classList.toggle("active");
+    close.classList.toggle("active");
+  });
+}
 
 // Display search bar
 if (search) {

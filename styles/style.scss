@@ -74,3 +74,8 @@ body {
     width: 100%;
   }
 }
+
+.search {
+  @include utilities.flex(center, center, column);
+  padding-top: 10%;
+}

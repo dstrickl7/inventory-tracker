@@ -32,7 +32,7 @@
                     <li class="navitem"><a href="../index.php" class="navlink">Inventory</a></li>
                     <li class="navitem"><a href="../list/list.php" class="navlink">Shopping List</a></li>
                     <li class="navitem"><button class="navlink search-btn" id="search" aria-current="page">Search</button></li>
-                    <form action="scripts/search-inventory.php" method="GET" class="search-container">
+                    <form action="search-inventory.php" method="GET" class="search-container">
                         <label for="search-item-inv">Search</label>
                         <input type="text" name="search-item-inv" id="search-item-inv" required>
                         <div class="btn-container">
@@ -48,7 +48,8 @@
         <div class="overlay"></div>
 </header>
 <body>
-
+    <main>
+        <section class="search"> 
 <?php
 include "config.php";
 
@@ -84,7 +85,8 @@ echo "</div>";
 
 $conn->close();
 ?>
-
+        </section>
+    </main>
 <script src="../dist/bundle.js"></script>
     <script src="./script.js"></script>
 </body>
