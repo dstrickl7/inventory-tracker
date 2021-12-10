@@ -1,53 +1,12 @@
 <?php
 session_start();
 if(!isset($_SESSION['user_id'])){
-    header('Location: ../login.php');
+    header('Location: login.php');
 };
+
+include ('header.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitchen Inventory Tracker</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Stylesheet -->
-<link rel="stylesheet" href="../styles/style.css">
-
-</head>
-<body>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="logo-container">
-                <a href="#" aria-label="homepage" class="logo-text"><img src="../styles/icons/shopping-list.svg" alt="The Kitchen Tracker" class="logo-img" aria-hidden="true">The Kitchen Tracker</a>
-            </div>
-            <div class="nav-icon-container">
-                <button class="nav-icon hamburger" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <img src="../styles/icons/hamburger.svg" alt="open menu" class="nav-icon-img">
-                </button>
-                <button class="nav-icon close" type="button" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-                    <img src="../styles/icons/icon-close.svg" alt="close menu" class="nav-icon-img">
-                </button>
-            </div>
-            <div class="navlist-container">
-                <ul class="navlist">
-                    <li class="navitem"><a href="../index.php" class="navlink">Inventory</a></li>
-                    <li class="navitem"><a href="list.php" class="navlink" aria-current="page">Shopping List</a></li>
-                    <button class="logout btn btn-fill">Logout</button>
-                </ul>
-                
-            </div>     
-        </nav>
-        <!-- Navbar end -->
-        <div class="overlay"></div>
-    </header>
     <main>
          <!--  List section begins  -->
         <section class="list" id="list">
@@ -57,7 +16,7 @@ if(!isset($_SESSION['user_id'])){
             <!-- Display list items -->
                 <div class="scroll-container">
                     <table>
-                        <?php include "../scripts/read-list.php" ;?>
+                        <?php include "scripts/read-list.php" ;?>
                     </table>
                    
                     
@@ -114,9 +73,9 @@ if(!isset($_SESSION['user_id'])){
             <!-- End List Container -->
         </section>
     </main>
-    <script src="../dist/bundle.js"></script>
-    <script src="../scripts/script.js"></script>
-    <script src="../scripts/list-scripts.js"></script>
+    <script src="dist/bundle.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/list-scripts.js"></script>
    
 </body>
 </html>

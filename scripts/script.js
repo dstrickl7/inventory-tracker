@@ -11,6 +11,12 @@ const search = document.querySelector("#search");
 const searchCont = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
 
+// Change color scheme
+const blue = document.querySelector("#blue");
+const green = document.querySelector("#green");
+const salmon = document.querySelector("#salmon");
+const grey = document.querySelector("#grey");
+
 // Open mobile nav
 if (navlist) {
   hamburger.addEventListener("click", () => {

@@ -65,14 +65,6 @@
   border: none;
 }
 
-// .btn-nofill-green {
-//   @include utilities.nofill(utilities.$green);
-// }
-
-// .btn-fill-green {
-//   @include utilities.fill(utilities.$green, utilities.$white);
-// }
-
-// .btn-fill-pink {
-//   @include utilities.fill(utilities.$salmon, utilities.$white);
-// }
+.bg-change {
+  padding: 0.5rem;
+}

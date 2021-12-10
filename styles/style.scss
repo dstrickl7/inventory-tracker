@@ -15,12 +15,46 @@
 body {
   font-size: 15px;
   font-family: utilities.$quicksand;
-  // background-color: utilities.$vlgreen;
-  // color: utilities.$black;
   @include utilities.theme(
     utilities.$green,
+    //Nav and button color
     utilities.$lgreen,
+    //nav highlight
     utilities.$vlgreen,
+    //Background color
+    utilities.$black //text color
+  );
+}
+
+body.blue {
+  font-size: 15px;
+  font-family: utilities.$quicksand;
+  @include utilities.theme(
+    utilities.$blue,
+    utilities.$lblue,
+    utilities.$pblue,
+    utilities.$black
+  );
+}
+
+body.salmon {
+  font-size: 15px;
+  font-family: utilities.$quicksand;
+  @include utilities.theme(
+    utilities.$dpink,
+    utilities.$salmon,
+    utilities.$lpink,
+    utilities.$black
+  );
+}
+
+body.grey {
+  font-size: 15px;
+  font-family: utilities.$quicksand;
+  @include utilities.theme(
+    utilities.$dgrey,
+    utilities.$dgrey,
+    utilities.$lgrey,
     utilities.$black
   );
 }
@@ -73,6 +107,19 @@ body {
   input {
     width: 100%;
   }
+}
+
+.green {
+  background-color: utilities.$green;
+}
+.blue {
+  background-color: utilities.$blue;
+}
+.salmon {
+  background-color: utilities.$salmon;
+}
+.grey {
+  background-color: utilities.$dgrey;
 }
 
 .search {

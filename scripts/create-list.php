@@ -1,7 +1,6 @@
 <?php
 // Include config file
 include "config.php";
-// include "list-json.php";
 
 // Variables
 $list_item = filter_var_array($_POST["list-item"] , FILTER_SANITIZE_STRING);
@@ -35,5 +34,5 @@ for($i = 0; $i < count($_POST['list-item']); $i++) {
 $stmt->close();
 $conn->close();
 exec('php list-json.php');
-header("location: ../list/list.php");
+header("location: ../list.php");
 ?>

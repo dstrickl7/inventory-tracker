@@ -127,6 +127,8 @@
 .search-item-container {
   @include utilities.flex(center, space-between, column);
   width: 80%;
+  min-height: 25vh;
+  max-height: 75vh;
 }
 
 .total-container {
@@ -191,6 +193,18 @@
     height: 80vh;
   }
 
+  .search-container.active {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin-top: 7.5%;
+    background-color: utilities.$white;
+    border: solid 0.25rem utilities.$green;
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 3;
+  }
+
   .scroll-container {
     overflow-y: auto;
   }
@@ -217,4 +231,10 @@
     width: 45%;
   }
   // Login end
+}
+
+@media (min-width: 1300px) {
+  .search-container.active {
+    margin-top: 5%;
+  }
 }

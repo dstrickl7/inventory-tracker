@@ -20,7 +20,7 @@ $result->data_seek(0);
 
 while($item = $result->fetch_assoc()){
     if (isset($_GET['id']) && $item['id'] == $_GET['id']) {
-            echo '<form action="../scripts/update-list.php" method="POST">';   
+            echo '<form action="/scripts/update-list.php" method="POST">';   
                 /*Item name input */
                 echo "<td>";
                         echo "<input type='text' name='list-item' value='" . $item["item_name"] . "'>";
@@ -47,9 +47,9 @@ while($item = $result->fetch_assoc()){
                 echo "<td>";
                     echo "<div class='list-btn-container'>";
                     // Update button
-                        echo "<a href='list.php?id=" . $item['id'] . "' role='button' class='update-btn'><img src='../styles/icons/shopping-list.svg' alt='Update'></a>";
+                        echo "<a href='list.php?id=" . $item['id'] . "' role='button' class='update-btn'><img src='/styles/icons/shopping-list.svg' alt='Update'></a>";
                     // Delete button
-                        echo "<a href='../scripts/delete-list.php?id=" . $item['id'] . "' role='button' class='delete-btn'><img src='../styles/icons/trashcan.svg' alt='Delete'></a>";
+                        echo "<a href='/scripts/delete-list.php?id=" . $item['id'] . "' role='button' class='delete-btn'><img src='/styles/icons/trashcan.svg' alt='Delete'></a>";
                 echo "</div>"; 
                     echo "</td>";
             echo "</tr>";  

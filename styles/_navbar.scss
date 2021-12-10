@@ -86,3 +86,48 @@
   list-style: none;
   padding: 0.5rem 0;
 }
+
+@media (min-width: 900px) {
+  .navbar {
+    align-items: center;
+  }
+
+  .navlist-container {
+    @include utilities.flex(center, space-between, row);
+    width: 50%;
+  }
+
+  .navlist {
+    @include utilities.flex(center, space-between, row);
+    width: 100%;
+  }
+
+  .navlink {
+    color: utilities.$white;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    &:after {
+      bottom: -1.3rem;
+      content: "";
+      height: 0.25rem;
+      left: 50%;
+      position: absolute;
+      background-color: utilities.$white;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0%;
+    }
+  }
+
+  .navlink:hover {
+    &:after {
+      width: 100%;
+      left: 0%;
+    }
+  }
+
+  .hamburger,
+  .nav-icon-container {
+    display: none;
+  }
+}
