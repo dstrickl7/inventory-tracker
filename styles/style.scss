@@ -79,3 +79,9 @@ body {
   @include utilities.flex(center, center, column);
   padding-top: 10%;
 }
+
+@media (min-width: 900px) {
+  .search {
+    padding-top: 5%;
+  }
+}

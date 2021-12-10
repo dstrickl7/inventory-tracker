@@ -630,4 +630,10 @@ body .btn-nofill {
   padding-top: 10%;
 }
 
+@media (min-width: 900px) {
+  .search {
+    padding-top: 5%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

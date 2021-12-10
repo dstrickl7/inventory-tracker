@@ -30,6 +30,7 @@ The project should accomplish:
 Future Additions
 
 - Different color schemes
+- Users can only see and edit their data
 - App suggests items that need to be added to shopping list based on current inventory and frequency of use of item
 - App suggests meal ideas using items on hand
 
@@ -74,12 +75,14 @@ This project came about because I wanted a way to keep track of the grocery item
 - Determining whether and when to use MySQL queries vs using and handling data as JSON
   - I am new to PHP and hadn't used MySQL prior. Trying to learn how to work with three different things that I'm unfamiliar with at the same time may have been trying to do too much at one time.
 - I wanted to make the update form display in the same place as the item the update was for, however I was unable to use an inline form because of how I wrote my logic. I decided to use css to style the update form so it would be more user-friendly.
-- Sanitizing inputs. I had an array of float values and I could not figure out a way to use the php built in data sanitization on it. I ended up looping through my post array and sanitizing each value individually.
+- Sanitizing inputs. I had an array of float values and I could not figure out a way to use the php built in data sanitization on it.
+  - I ended up looping through my post array and sanitizing each value individually.
 - Learning to use Firebase 9. I was completely unfamiliar with Firebase prior to this project and with the more recent release of version 9, there were few tutorials and guides. Fortunately, I found a great tutorial that helped me breakthrough my confusion.
 
 ### Continued development
 
 - Data sanitization and security. My mentor told me the very first app he deployed fell victim to hacker bots and he ended up with an unexpected bill from his database service.
+- PHP sessions. I want to be able to have users data be only accessible to the specific user who created it.
 
 ### Useful resources
 

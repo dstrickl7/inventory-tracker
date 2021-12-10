@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  signInAnonymously,
   onAuthStateChanged,
 } from "@firebase/auth";
 
@@ -87,6 +88,24 @@ if (loginForm) {
   });
 }
 
+// Sign in guests
+
+const guest = document.querySelector(".guest-login");
+if (guest) {
+  guest.addEventListener("click", () => {
+    signInAnonymously(auth)
+      .then(() => {
+        window.location.replace("loggedin.php");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  });
+}
+
+// Log out user
+
 const logoutBtn = document.querySelector(".logout");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {
@@ -104,7 +123,6 @@ if (logoutBtn) {
 
 /*
 // Get current user
-const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
