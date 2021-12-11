@@ -28,4 +28,23 @@
   .navbar {
     background: linear-gradient($shade, $baseColor, $shade);
   }
+
+  .search-container.active {
+    border-color: $baseColor;
+  }
+
+  .add-container-close,
+  .list-add-container-close,
+  .edit-close,
+  .close-btn {
+    path {
+      fill: $baseColor;
+    }
+  }
+
+  .list-edit-close {
+    path {
+      fill: $baseColor;
+    }
+  }
 }

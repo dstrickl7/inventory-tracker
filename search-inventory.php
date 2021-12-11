@@ -1,6 +1,6 @@
 <?php
-include "config.php";
-include ('../header.php');
+include "scripts/config.php";
+include ('./header.php');
 
 $sql = "SELECT * FROM inventory";
 $result = $conn->query($sql);
@@ -32,13 +32,13 @@ if($found==0){
 }
 
 echo "</div>";
-echo "<a href='../index.php'>Return</a>"; 
+echo "<a href='./index.php'>Return</a>"; 
 echo "</div>";
 
 $conn->close();
 ?>
         </section>
     </main>
-<script src="../dist/bundle.js"></script>
-    <script src="./script.js"></script>
+<script src="dist/bundle.js"></script>
+    <script src="scripts/script.js"></script>
 </body>

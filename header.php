@@ -19,7 +19,7 @@
         <!-- Navbar -->
         <nav class="navbar">
             <div class="logo-container">
-                <a href="#" aria-label="homepage" class="logo-text"><img src="../styles/icons/shopping-list.svg" alt="The Kitchen Tracker" class="logo-img" aria-hidden="true">The Kitchen Tracker</a>
+                <a href="index.php" aria-label="homepage" class="logo-text"><img src="../styles/icons/shopping-list.svg" alt="The Kitchen Tracker" class="logo-img" aria-hidden="true">The Kitchen Tracker</a>
             </div>
             <div class="nav-icon-container">
                 <button class="nav-icon hamburger" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
                     <li class="navitem"><a href="index.php" class="navlink" aria-current="page">Inventory</a></li>
                     <li class="navitem"><a href="list.php" class="navlink">Shopping List</a></li>
                     <li class="navitem"><button class="navlink search-btn" id="search">Search</button></li>
-                    <form action="scripts/search-inventory.php" method="GET" class="search-container">
+                    <form action="search-inventory.php" method="GET" class="search-container">
                         <label for="search-item-inv">Search</label>
                         <input type="text" name="search-item-inv" id="search-item-inv" required>
                         <div class="btn-container">
@@ -42,12 +42,14 @@
                         </div> 
                     </form>
                     <div class="bg-change-container">
-                        <p>Change Background:</p>
+                    <p>Change Background:</p>
+                        <div>
                             <button type="button" class="bg-change green" id="green"></button>
                             <button type="button" class="bg-change blue" id="blue"></button>
                             <button type="button" class="bg-change salmon" id="salmon"></button>
                             <button type="button" class="bg-change grey" id="grey"></button>
                         </div>
+                    </div>
                     <button class="logout btn btn-fill">Logout</button>
                 </ul>
                

@@ -6,6 +6,17 @@
   padding: 1rem;
 }
 
+.bg-change-container {
+  margin-top: 20%;
+  p {
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  div {
+    @include utilities.flex(center, center);
+  }
+}
+
 .search-container {
   display: none;
 }
@@ -193,13 +204,22 @@
     height: 80vh;
   }
 
+  .bg-change-container {
+    p {
+      color: utilities.$white;
+    }
+    div {
+      @include utilities.flex(center, center);
+    }
+  }
+
   .search-container.active {
     position: absolute;
     top: 0;
     right: 5%;
     margin-top: 7.5%;
     background-color: utilities.$white;
-    border: solid 0.25rem utilities.$green;
+    border: solid 0.25rem;
     border-radius: 1rem;
     padding: 1rem;
     z-index: 3;

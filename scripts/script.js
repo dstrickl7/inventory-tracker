@@ -54,23 +54,47 @@ if (backBtn) {
   });
 }
 
+// Keep theme changes when page refreshes
+
+if (!localStorage.getItem("theme")) {
+  populateStorage();
+} else {
+  setStyles();
+}
+
+function populateStorage(e = "green") {
+  localStorage.setItem("theme", e);
+  setStyles();
+}
+
+function setStyles() {
+  const currentTheme = localStorage.getItem("theme");
+  body.classList = currentTheme;
+}
+
 // Change body color
-blue.addEventListener("click", () => {
-  body.classList.add("blue");
-  body.classList.remove("green", "salmon", "grey");
-});
+if (blue) {
+  blue.addEventListener("click", (e) => {
+    populateStorage(e.target.id);
+    body.classList.add("blue");
+    body.classList.remove("green", "salmon", "grey");
+  });
 
-green.addEventListener("click", () => {
-  body.classList.add("green");
-  body.classList.remove("blue", "salmon", "grey");
-});
+  green.addEventListener("click", (e) => {
+    populateStorage(e.target.id);
+    body.classList.add("green");
+    body.classList.remove("blue", "salmon", "grey");
+  });
 
-salmon.addEventListener("click", () => {
-  body.classList.add("salmon");
-  body.classList.remove("blue", "green", "grey");
-});
+  salmon.addEventListener("click", (e) => {
+    populateStorage(e.target.id);
+    body.classList.add("salmon");
+    body.classList.remove("blue", "green", "grey");
+  });
 
-grey.addEventListener("click", () => {
-  body.classList.add("grey");
-  body.classList.remove("blue", "salmon", "green");
-});
+  grey.addEventListener("click", (e) => {
+    populateStorage(e.target.id);
+    body.classList.add("grey");
+    body.classList.remove("blue", "salmon", "green");
+  });
+}

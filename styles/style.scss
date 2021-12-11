@@ -15,15 +15,6 @@
 body {
   font-size: 15px;
   font-family: utilities.$quicksand;
-  @include utilities.theme(
-    utilities.$green,
-    //Nav and button color
-    utilities.$lgreen,
-    //nav highlight
-    utilities.$vlgreen,
-    //Background color
-    utilities.$black //text color
-  );
 }
 
 body.green {
