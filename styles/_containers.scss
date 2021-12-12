@@ -65,7 +65,6 @@
 
 .inv-item-cont,
 .li-item-cont {
-  @include utilities.flex(center, center);
   margin-top: 1rem;
 }
 
@@ -79,19 +78,18 @@
   }
 }
 
-.amt-input {
-  width: 15%;
-}
-
+.amt-input,
 .unit-input {
   width: 15%;
 }
 
 .btn-container {
   width: 100%;
-  @include utilities.flex(center, center);
 }
 
+.inv-item-cont,
+.li-item-cont,
+.btn-container,
 .list-btn-container {
   @include utilities.flex(center, center);
 }
@@ -101,28 +99,23 @@
   @include utilities.flex(center, center, column);
 }
 
-.item-container {
-  @include utilities.flex(center, space-between);
-  width: 100%;
-}
-
-.item-info-cont {
-  @include utilities.flex(center, space-between);
-  width: 100%;
-}
-
+.item-container,
+.item-info-cont,
 .item-info {
-  @include utilities.flex(center, space-between);
   width: 100%;
 }
 
-.item-amount-cont {
+.item-container,
+.item-info-cont,
+.item-info,
+.item-amount-cont,
+.inventory-edit,
+.list-edit {
   @include utilities.flex(center, space-between);
 }
 
 .inventory-edit,
 .list-edit {
-  @include utilities.flex(center, space-between);
   position: absolute;
   width: 80%;
   top: 20%;
@@ -142,13 +135,13 @@
   max-height: 75vh;
 }
 
+.login-container,
 .total-container {
   @include utilities.flex(center, center, column);
 }
 
 // Login start
 .login-container {
-  @include utilities.flex(center, center, column);
   width: 80%;
   margin: auto;
   margin-top: 2.5rem;
@@ -205,6 +198,7 @@
   }
 
   .bg-change-container {
+    margin-top: 0;
     p {
       color: utilities.$white;
     }
@@ -229,10 +223,7 @@
     overflow-y: auto;
   }
 
-  .add-container {
-    width: 50%;
-  }
-
+  .add-container,
   .inventory-edit,
   list-edit {
     width: 50%;

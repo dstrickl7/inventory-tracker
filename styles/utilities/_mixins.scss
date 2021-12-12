@@ -21,9 +21,22 @@
   color: $text-color;
   .btn-fill {
     @include fill($baseColor, white);
+    &:hover {
+      @include fill($shade, white);
+    }
   }
   .btn-nofill {
     @include nofill($baseColor);
+    &:hover {
+      @include fill($shade, white);
+    }
+  }
+
+  .logout {
+    @include fill($shade, white);
+    &:hover {
+      @include fill($lightColor, white);
+    }
   }
   .navbar {
     background: linear-gradient($shade, $baseColor, $shade);
@@ -37,12 +50,6 @@
   .list-add-container-close,
   .edit-close,
   .close-btn {
-    path {
-      fill: $baseColor;
-    }
-  }
-
-  .list-edit-close {
     path {
       fill: $baseColor;
     }

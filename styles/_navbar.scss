@@ -1,16 +1,11 @@
 @use "./utilities";
 
 .navbar {
-  // background: linear-gradient(
-  //   utilities.$lgreen,
-  //   utilities.$green,
-  //   utilities.$lgreen
-  // );
   width: 100%;
   @include utilities.flex(space-between, center);
 }
 
-// Logo and log container
+// Logo and logo container
 .logo-container {
   @include utilities.flex(center, flex-start);
   width: 60%;
@@ -90,6 +85,7 @@
 @media (min-width: 900px) {
   .navbar {
     align-items: center;
+    padding: 0.5rem 0.75rem;
   }
 
   .navlist-container {
@@ -108,7 +104,7 @@
     position: relative;
     display: inline-block;
     &:after {
-      bottom: -1.3rem;
+      bottom: -2rem;
       content: "";
       height: 0.25rem;
       left: 50%;

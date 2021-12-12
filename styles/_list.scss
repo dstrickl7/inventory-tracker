@@ -1,9 +1,5 @@
 @use "utilities";
 
-// .list {
-//   display: none;
-// }
-
 .list {
   @include utilities.flex(center, center, column);
   padding-top: 10%;
@@ -56,11 +52,6 @@ td {
     width: 50%;
   }
 }
-
-// thead
-// th
-// tr
-// td
 
 @media (min-width: 768px) {
   .list {

@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['user_id'])){
+    header('Location: login.php');
+};
+
 include "scripts/config.php";
 include ('./header.php');
 
@@ -18,6 +23,7 @@ $search_item = strtolower(filter_input(INPUT_GET, "search-item-inv", FILTER_SANI
 $data = json_decode($json, true);
 $found=0;
 
+echo "<section class='search' id='search-section'>";
 echo "<div class='container search-item-container'>";
 echo "<h2 class='.col-title'>Search Results</h2>";
 echo "<div class='scroll-container'>";

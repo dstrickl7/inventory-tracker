@@ -27,8 +27,6 @@ body.green {
 }
 
 body.blue {
-  font-size: 15px;
-  font-family: utilities.$quicksand;
   @include utilities.theme(
     utilities.$blue,
     utilities.$lblue,
@@ -38,8 +36,6 @@ body.blue {
 }
 
 body.salmon {
-  font-size: 15px;
-  font-family: utilities.$quicksand;
   @include utilities.theme(
     utilities.$dpink,
     utilities.$salmon,
@@ -49,8 +45,6 @@ body.salmon {
 }
 
 body.grey {
-  font-size: 15px;
-  font-family: utilities.$quicksand;
   @include utilities.theme(
     utilities.$grey,
     utilities.$dgrey,
@@ -91,15 +85,6 @@ body.grey {
   top: 5%;
   right: 5%;
   z-index: 10;
-  path {
-    fill: utilities.$green;
-  }
-}
-
-.list-edit-close {
-  path {
-    fill: utilities.$green;
-  }
 }
 
 .inputs-login {

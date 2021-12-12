@@ -22,7 +22,7 @@ session_start();
 
 </head>
 
-<body>
+<body class="green">
     <header>
         <!-- Navbar -->
         <nav class="navbar">

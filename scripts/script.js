@@ -1,3 +1,4 @@
+// Login & Signup variables
 const login = document.querySelector(".login");
 const signup = document.querySelector(".signup");
 const signupBtn = document.querySelector("#signupBtn");
@@ -8,6 +9,7 @@ const hamburger = document.querySelector(".hamburger");
 const close = document.querySelector(".close");
 const navlist = document.querySelector(".navlist-container");
 const search = document.querySelector("#search");
+const searchInput = document.querySelector("#search-item-inv");
 const searchCont = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
 
@@ -37,6 +39,7 @@ if (navlist) {
 if (search) {
   search.addEventListener("click", () => {
     searchCont.classList.toggle("active");
+    searchInput.focus();
   });
 }
 
@@ -55,21 +58,22 @@ if (backBtn) {
 }
 
 // Keep theme changes when page refreshes
+if (body) {
+  if (!localStorage.getItem("theme")) {
+    populateStorage();
+  } else {
+    setStyles();
+  }
 
-if (!localStorage.getItem("theme")) {
-  populateStorage();
-} else {
-  setStyles();
-}
+  function populateStorage(e = "green") {
+    localStorage.setItem("theme", e);
+    setStyles();
+  }
 
-function populateStorage(e = "green") {
-  localStorage.setItem("theme", e);
-  setStyles();
-}
-
-function setStyles() {
-  const currentTheme = localStorage.getItem("theme");
-  body.classList = currentTheme;
+  function setStyles() {
+    const currentTheme = localStorage.getItem("theme");
+    body.classList = currentTheme;
+  }
 }
 
 // Change body color

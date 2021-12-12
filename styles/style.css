@@ -101,6 +101,7 @@
 @media (min-width: 900px) {
   .navbar {
     align-items: center;
+    padding: 0.5rem 0.75rem;
   }
 
   .navlist-container {
@@ -126,7 +127,7 @@
     display: inline-block;
   }
   .navlink:after {
-    bottom: -1.3rem;
+    bottom: -2rem;
     content: "";
     height: 0.25rem;
     left: 50%;
@@ -224,10 +225,6 @@
 
 .inv-item-cont,
 .li-item-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   margin-top: 1rem;
 }
 
@@ -244,22 +241,18 @@
   max-width: 100%;
 }
 
-.amt-input {
-  width: 15%;
-}
-
+.amt-input,
 .unit-input {
   width: 15%;
 }
 
 .btn-container {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
+.inv-item-cont,
+.li-item-cont,
+.btn-container,
 .list-btn-container {
   display: flex;
   flex-direction: row;
@@ -275,31 +268,18 @@
   align-items: center;
 }
 
-.item-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.item-info-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
+.item-container,
+.item-info-cont,
 .item-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
-.item-amount-cont {
+.item-container,
+.item-info-cont,
+.item-info,
+.item-amount-cont,
+.inventory-edit,
+.list-edit {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -308,10 +288,6 @@
 
 .inventory-edit,
 .list-edit {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   position: absolute;
   width: 80%;
   top: 20%;
@@ -334,6 +310,7 @@
   max-height: 75vh;
 }
 
+.login-container,
 .total-container {
   display: flex;
   flex-direction: column;
@@ -342,10 +319,6 @@
 }
 
 .login-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 80%;
   margin: auto;
   margin-top: 2.5rem;
@@ -400,6 +373,9 @@
     height: 80vh;
   }
 
+  .bg-change-container {
+    margin-top: 0;
+  }
   .bg-change-container p {
     color: #fcfcfc;
   }
@@ -426,11 +402,8 @@
     overflow-y: auto;
   }
 
-  .add-container {
-    width: 50%;
-  }
-
-  .inventory-edit,
+  .add-container,
+.inventory-edit,
 list-edit {
     width: 50%;
   }
@@ -540,6 +513,9 @@ td svg {
   padding: 0.5rem;
   font-weight: 600;
   margin: 1rem 0.5rem;
+}
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn-sm {
@@ -662,10 +638,26 @@ body.green .btn-fill {
   background-color: #57ad45;
   color: white;
 }
+body.green .btn-fill:hover {
+  background-color: #a3e296;
+  color: white;
+}
 body.green .btn-nofill {
   background-color: transparent;
   border: solid #57ad45 0.2rem;
   color: #57ad45;
+}
+body.green .btn-nofill:hover {
+  background-color: #a3e296;
+  color: white;
+}
+body.green .logout {
+  background-color: #a3e296;
+  color: white;
+}
+body.green .logout:hover {
+  background-color: #dfebdc;
+  color: white;
 }
 body.green .navbar {
   background: linear-gradient(#a3e296, #57ad45, #a3e296);
@@ -679,13 +671,8 @@ body.green .edit-close path,
 body.green .close-btn path {
   fill: #57ad45;
 }
-body.green .list-edit-close path {
-  fill: #57ad45;
-}
 
 body.blue {
-  font-size: 15px;
-  font-family: "Quicksand", sans-serif;
   background-color: #e1ecf6;
   color: #000000;
 }
@@ -693,10 +680,26 @@ body.blue .btn-fill {
   background-color: #6a8bad;
   color: white;
 }
+body.blue .btn-fill:hover {
+  background-color: #8cc2fa;
+  color: white;
+}
 body.blue .btn-nofill {
   background-color: transparent;
   border: solid #6a8bad 0.2rem;
   color: #6a8bad;
+}
+body.blue .btn-nofill:hover {
+  background-color: #8cc2fa;
+  color: white;
+}
+body.blue .logout {
+  background-color: #8cc2fa;
+  color: white;
+}
+body.blue .logout:hover {
+  background-color: #e1ecf6;
+  color: white;
 }
 body.blue .navbar {
   background: linear-gradient(#8cc2fa, #6a8bad, #8cc2fa);
@@ -710,13 +713,8 @@ body.blue .edit-close path,
 body.blue .close-btn path {
   fill: #6a8bad;
 }
-body.blue .list-edit-close path {
-  fill: #6a8bad;
-}
 
 body.salmon {
-  font-size: 15px;
-  font-family: "Quicksand", sans-serif;
   background-color: #f6dbd9;
   color: #000000;
 }
@@ -724,10 +722,26 @@ body.salmon .btn-fill {
   background-color: #ad6661;
   color: white;
 }
+body.salmon .btn-fill:hover {
+  background-color: #faaaa4;
+  color: white;
+}
 body.salmon .btn-nofill {
   background-color: transparent;
   border: solid #ad6661 0.2rem;
   color: #ad6661;
+}
+body.salmon .btn-nofill:hover {
+  background-color: #faaaa4;
+  color: white;
+}
+body.salmon .logout {
+  background-color: #faaaa4;
+  color: white;
+}
+body.salmon .logout:hover {
+  background-color: #f6dbd9;
+  color: white;
 }
 body.salmon .navbar {
   background: linear-gradient(#faaaa4, #ad6661, #faaaa4);
@@ -741,13 +755,8 @@ body.salmon .edit-close path,
 body.salmon .close-btn path {
   fill: #ad6661;
 }
-body.salmon .list-edit-close path {
-  fill: #ad6661;
-}
 
 body.grey {
-  font-size: 15px;
-  font-family: "Quicksand", sans-serif;
   background-color: #b9bfc4;
   color: #000000;
 }
@@ -755,10 +764,26 @@ body.grey .btn-fill {
   background-color: #62656b;
   color: white;
 }
+body.grey .btn-fill:hover {
+  background-color: #4d4f53;
+  color: white;
+}
 body.grey .btn-nofill {
   background-color: transparent;
   border: solid #62656b 0.2rem;
   color: #62656b;
+}
+body.grey .btn-nofill:hover {
+  background-color: #4d4f53;
+  color: white;
+}
+body.grey .logout {
+  background-color: #4d4f53;
+  color: white;
+}
+body.grey .logout:hover {
+  background-color: #b9bfc4;
+  color: white;
 }
 body.grey .navbar {
   background: linear-gradient(#4d4f53, #62656b, #4d4f53);
@@ -770,9 +795,6 @@ body.grey .add-container-close path,
 body.grey .list-add-container-close path,
 body.grey .edit-close path,
 body.grey .close-btn path {
-  fill: #62656b;
-}
-body.grey .list-edit-close path {
   fill: #62656b;
 }
 
@@ -808,16 +830,6 @@ body.grey .list-edit-close path {
   top: 5%;
   right: 5%;
   z-index: 10;
-}
-.add-container-close path,
-.list-add-container-close path,
-.edit-close path,
-.close-btn path {
-  fill: #57ad45;
-}
-
-.list-edit-close path {
-  fill: #57ad45;
 }
 
 .inputs-login {

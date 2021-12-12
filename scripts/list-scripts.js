@@ -14,7 +14,6 @@ const total = document.querySelector("#total");
 const tax = document.querySelector("#tax");
 let itemCosts = document.querySelectorAll(".item-cost");
 let itemAmounts = document.querySelectorAll(".item-amounts");
-let itemInfo;
 
 // Display add items container
 addList.addEventListener("click", () => {

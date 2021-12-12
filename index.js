@@ -9,7 +9,6 @@ import {
   onAuthStateChanged,
 } from "@firebase/auth";
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyACTzzT8Qb74Msi39YDLx0-MWZg7fLnvsA",
   authDomain: "the-kitchen-tracker.firebaseapp.com",
@@ -120,18 +119,3 @@ if (logoutBtn) {
       });
   });
 }
-
-/*
-// Get current user
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    // ...
-  } else {
-    // User is signed out
-    // ...
-  }
-});
-*/
