@@ -107,7 +107,8 @@ body.grey {
   background-color: utilities.$dgrey;
 }
 
-.search {
+.search,
+.logout-section {
   @include utilities.flex(center, center, column);
   padding-top: 10%;
 }

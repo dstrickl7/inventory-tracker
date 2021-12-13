@@ -38,8 +38,9 @@ header( "Refresh:3; url=login.php", true, 303);
         <div class="overlay"></div>
     </header>
 <body>
-    <div class="container main-container">
+    <section class="logout-section">
         <h1>GoodBye!</h1>
-    </div>
+    </section>
+    
 </body>
 </html>

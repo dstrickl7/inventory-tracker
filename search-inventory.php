@@ -5,7 +5,7 @@ if(!isset($_SESSION['user_id'])){
 };
 
 include "scripts/config.php";
-include ('./header.php');
+include ('header.php');
 
 $sql = "SELECT * FROM inventory";
 $result = $conn->query($sql);
@@ -27,6 +27,8 @@ echo "<section class='search' id='search-section'>";
 echo "<div class='container search-item-container'>";
 echo "<h2 class='.col-title'>Search Results</h2>";
 echo "<div class='scroll-container'>";
+/* Below doesn't work for PHP versions <8 */
+/*
 foreach ($data as $item) {
     if(str_contains(strtolower($item["item_name"]), $search_item)){
         $found++;
@@ -35,6 +37,15 @@ foreach ($data as $item) {
 }
 if($found==0){
     echo "<p>Item not found</p>";
+}
+*/
+foreach ($data as $item) {
+    if(strpos(strtolower($item["item_name"]), $search_item)!==false){
+        $found++;
+        echo "<p class='search-results'>".$item["item_name"]. " " . $item["amount"] . $item["unit"]."</p>";  
+    }else{
+        echo "<p>Item not found</p>";
+    }
 }
 
 echo "</div>";
