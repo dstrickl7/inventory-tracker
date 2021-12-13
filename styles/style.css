@@ -98,6 +98,15 @@
   padding: 0.5rem 0;
 }
 
+@media (max-width: 370px) {
+  .logo-container {
+    width: 75%;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+  }
+}
 @media (min-width: 900px) {
   .navbar {
     align-items: center;

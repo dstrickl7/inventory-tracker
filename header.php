@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitchen Inventory Tracker</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="styles/icons/favicon.ico">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="styles/style.css">
 
 </head>
 <body id="body">
@@ -19,14 +20,14 @@
         <!-- Navbar -->
         <nav class="navbar">
             <div class="logo-container">
-                <a href="index.php" aria-label="homepage" class="logo-text"><img src="../styles/icons/shopping-list.svg" alt="The Kitchen Tracker" class="logo-img" aria-hidden="true">The Kitchen Tracker</a>
+                <a href="index.php" aria-label="homepage" class="logo-text"><img src="styles/icons/shopping-list.svg" alt="The Kitchen Tracker" class="logo-img" aria-hidden="true">The Kitchen Tracker</a>
             </div>
             <div class="nav-icon-container">
                 <button class="nav-icon hamburger" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <img src="../styles/icons/hamburger.svg" alt="open menu" class="nav-icon-img">
+                    <img src="styles/icons/hamburger.svg" alt="open menu" class="nav-icon-img">
                 </button>
                 <button class="nav-icon close" type="button" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-                    <img src="../styles/icons/icon-close.svg" alt="close menu" class="nav-icon-img">
+                    <img src="styles/icons/icon-close.svg" alt="close menu" class="nav-icon-img">
                 </button>
             </div>
             <div class="navlist-container">

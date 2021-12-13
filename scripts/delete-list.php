@@ -14,6 +14,6 @@ $stmt->execute();
 
 $stmt->close();
 $conn->close();
-exec('php list-json.php');
+include('php scripts/list-json.php');
 header("location: ../list.php");
 ?>

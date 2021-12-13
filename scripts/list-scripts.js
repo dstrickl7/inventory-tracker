@@ -55,8 +55,9 @@ function addSection(parent, section) {
 let costArray = [];
 // Get JSON
 const getJsonData = () => {
-  fetch("../scripts/list-data.json")
-    .then((res) => res.json())
+  // fetch("scripts/list-data.json")
+  fetch("scripts/list-json.php")
+    .then((response) => response.json())
     .then((data) => {
       data.forEach((item) => {
         costArray.push(item.cost * item.amount);

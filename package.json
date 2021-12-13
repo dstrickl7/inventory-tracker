@@ -2,7 +2,7 @@
   "name": "inventory-tracker",
   "version": "1.0.0",
   "description": "- [Overview](#overview)\r   - [The challenge](#the-challenge)\r   - [Screenshot](#screenshot)\r   - [Links](#links)\r - [My process](#my-process)\r   - [Built with](#built-with)\r   - [What I learned](#what-i-learned)\r   - [Challenges](#challenges)\r   - [Continued development](#continued-development)\r   - [Useful resources](#useful-resources)\r - [Author](#author)",
-  "main": "index.js",
+  "main": "./scripts/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development"

@@ -53,7 +53,7 @@ include ('header.php');
                             </div>
                             <div class="inputs">
                                 <label for="list-amount">Amount</label>
-                                <input type="number" name="list-amount[]" id="list-amount" step=".25" min="0" max="1000">
+                                <input type="number" name="list-amount[]" id="list-amount" step="1" min="0" max="100">
                             </div>
                             <div class="inputs">
                                 <label for="cost">Est. Cost</label>

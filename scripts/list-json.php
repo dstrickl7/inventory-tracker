@@ -11,9 +11,13 @@ while($item = $result->fetch_assoc()){
 }
 
 $json=json_encode($my_array);
-print_r($json);
+echo($json);
 
-file_put_contents('list-data.json', $json);
+// file_put_contents('list-data.json', $json);
+
+
+header('Content-Type: application/json; charset=utf-8');
+
 
 $conn->close();
 ?>

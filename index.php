@@ -15,7 +15,7 @@ include ('header.php');
                 <h1 class="title main-title">Inventory</h1>
             <!-- Display inventory items -->
                 <div class="scroll-container inventory-scroll">
-                    <?php include "scripts/read-inventory.php" ;?>
+                    <?php include ("scripts/read-inventory.php") ;?>
                 </div>
                 
                 <!-- Button to add items -->
