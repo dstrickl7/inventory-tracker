@@ -12,7 +12,7 @@ include ('header.php');
         <section class="list" id="list">
             <!-- List Container -->
             <div class="container main-container">
-                <h1 class="title main-title">List</h1>
+                <h1 class="title main-title">Shopping List</h1>
             <!-- Display list items -->
                 <div class="scroll-container">
                     <table>
