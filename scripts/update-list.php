@@ -24,7 +24,7 @@ $stmt->execute();
 // Close connection
 $stmt->close();
 $conn->close();
-include('php scripts/list-json.php');
+
 header("location: ../list.php");
 
 ?>

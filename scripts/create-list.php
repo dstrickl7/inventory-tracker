@@ -33,6 +33,6 @@ for($i = 0; $i < count($_POST['list-item']); $i++) {
 // Close connection
 $stmt->close();
 $conn->close();
-include('php scripts/list-json.php');
+
 header("location: ../list.php");
 ?>

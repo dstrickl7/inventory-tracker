@@ -55,3 +55,24 @@
     }
   }
 }
+
+@media (min-width: 900px) {
+  @mixin theme($baseColor, $shade, $lightColor, $text-color) {
+    .btn-fill {
+      &:hover {
+        @include fill($shade, white);
+      }
+    }
+    .btn-nofill {
+      &:hover {
+        @include fill($shade, white);
+      }
+    }
+
+    .logout {
+      &:hover {
+        @include fill($lightColor, white);
+      }
+    }
+  }
+}

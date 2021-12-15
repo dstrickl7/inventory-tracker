@@ -43,7 +43,8 @@ foreach ($data as $item) {
     if(strpos(strtolower($item["item_name"]), $search_item)!==false){
         $found++;
         echo "<p class='search-results'>".$item["item_name"]. " " . $item["amount"] . $item["unit"]."</p>";  
-    }else{
+    }
+    if($found==0){
         echo "<p>Item not found</p>";
     }
 }

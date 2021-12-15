@@ -10,7 +10,7 @@ if($result->fetch_assoc()){
             echo "<th scope='col'>Item</th>";
             echo "<th scope='col'>Amount</th>";
             echo "<th scope='col'>Est. Cost</th>";
-            echo " <th scope='col'>Update</th>";
+            echo "<th scope='col'>Update</th>";
         echo "</tr>";
     echo "</thead>";
 }else{

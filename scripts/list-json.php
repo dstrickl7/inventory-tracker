@@ -10,13 +10,10 @@ while($item = $result->fetch_assoc()){
     array_push($my_array, $item);
 }
 
+// Return data as JSON
 $json=json_encode($my_array);
 echo($json);
-
-// file_put_contents('list-data.json', $json);
-
-
-header('Content-Type: application/json; charset=utf-8');
+// header('Content-Type: application/json; charset=utf-8');
 
 
 $conn->close();
