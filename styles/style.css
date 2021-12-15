@@ -651,25 +651,13 @@ body.green .btn-fill {
   background-color: #57ad45;
   color: white;
 }
-body.green .btn-fill:hover {
-  background-color: #a3e296;
-  color: white;
-}
 body.green .btn-nofill {
   background-color: transparent;
   border: solid #57ad45 0.2rem;
   color: #57ad45;
 }
-body.green .btn-nofill:hover {
-  background-color: #a3e296;
-  color: white;
-}
 body.green .logout {
   background-color: #a3e296;
-  color: white;
-}
-body.green .logout:hover {
-  background-color: #dfebdc;
   color: white;
 }
 body.green .navbar {
@@ -693,25 +681,13 @@ body.blue .btn-fill {
   background-color: #6a8bad;
   color: white;
 }
-body.blue .btn-fill:hover {
-  background-color: #8cc2fa;
-  color: white;
-}
 body.blue .btn-nofill {
   background-color: transparent;
   border: solid #6a8bad 0.2rem;
   color: #6a8bad;
 }
-body.blue .btn-nofill:hover {
-  background-color: #8cc2fa;
-  color: white;
-}
 body.blue .logout {
   background-color: #8cc2fa;
-  color: white;
-}
-body.blue .logout:hover {
-  background-color: #e1ecf6;
   color: white;
 }
 body.blue .navbar {
@@ -735,25 +711,13 @@ body.salmon .btn-fill {
   background-color: #ad6661;
   color: white;
 }
-body.salmon .btn-fill:hover {
-  background-color: #faaaa4;
-  color: white;
-}
 body.salmon .btn-nofill {
   background-color: transparent;
   border: solid #ad6661 0.2rem;
   color: #ad6661;
 }
-body.salmon .btn-nofill:hover {
-  background-color: #faaaa4;
-  color: white;
-}
 body.salmon .logout {
   background-color: #faaaa4;
-  color: white;
-}
-body.salmon .logout:hover {
-  background-color: #f6dbd9;
   color: white;
 }
 body.salmon .navbar {
@@ -777,25 +741,13 @@ body.grey .btn-fill {
   background-color: #62656b;
   color: white;
 }
-body.grey .btn-fill:hover {
-  background-color: #4d4f53;
-  color: white;
-}
 body.grey .btn-nofill {
   background-color: transparent;
   border: solid #62656b 0.2rem;
   color: #62656b;
 }
-body.grey .btn-nofill:hover {
-  background-color: #4d4f53;
-  color: white;
-}
 body.grey .logout {
   background-color: #4d4f53;
-  color: white;
-}
-body.grey .logout:hover {
-  background-color: #b9bfc4;
   color: white;
 }
 body.grey .navbar {
