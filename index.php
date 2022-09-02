@@ -51,6 +51,8 @@ include ('header.php');
                                     <option value="spices & seasonings">Spices & Seasonings</option>
                                     <option value="condiments, vinegars, & oils">Condiments, Vinegars, & Oils</option>
                                     <option value="baking essentials">Baking Essentials</option>
+                                    <option value="pantry">Pantry</option>
+                                    <option value="frozen">Frozen Foods</option>
                                 </select>
                             </div>
                             <div class="inputs amt-input">
